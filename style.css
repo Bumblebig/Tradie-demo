@@ -1,0 +1,299 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #5987e3;
+  overflow: hidden;
+  z-index: -8;
+}
+.background li {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #5079cc;
+  color: transparent;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 11s ease-in forwards infinite;
+}
+undefined .background li:nth-child(0) {
+  animation-delay: 0s;
+  left: 4vw;
+  top: 79vh;
+}
+
+.background li:nth-child(1) {
+  animation-delay: 2s;
+  left: 46vw;
+  top: 95vh;
+}
+
+.background li:nth-child(2) {
+  animation-delay: 4s;
+  left: 67vw;
+  top: 29vh;
+  border-color: #6194f9;
+}
+
+.background li:nth-child(3) {
+  animation-delay: 6s;
+  left: 36vw;
+  top: 17vh;
+  border-color: #6194f9;
+}
+
+.background li:nth-child(4) {
+  animation-delay: 8s;
+  left: 94vw;
+  top: 59vh;
+}
+
+.background li:nth-child(5) {
+  animation-delay: 10s;
+  left: 63vw;
+  top: 7vh;
+}
+
+.background li:nth-child(6) {
+  animation-delay: 12s;
+  left: 10vw;
+  top: 71vh;
+  border-color: #6194f9;
+}
+
+.background li:nth-child(7) {
+  animation-delay: 14s;
+  left: 79vw;
+  top: 43vh;
+}
+
+.background li:nth-child(8) {
+  animation-delay: 16s;
+  left: 82vw;
+  top: 84vh;
+}
+
+.background li:nth-child(9) {
+  animation-delay: 18s;
+  left: 24vw;
+  top: 23vh;
+}
+
+.background li:nth-child(10) {
+  animation-delay: 20s;
+  left: 37vw;
+  top: 48vh;
+}
+
+body {
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  transition: all ease-in-out 0.4s;
+  color: #212529;
+  overflow-x: hidden;
+}
+
+header {
+  color: white;
+  height: 100vh;
+}
+
+.navigations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+nav li:hover {
+  font-weight: 500;
+  transition: inherit;
+}
+
+.header-text {
+  width: 70%;
+  margin: 150px auto 50px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 4.5rem;
+  line-height: 1.1;
+}
+
+.desc {
+  width: 80%;
+  margin: 20px auto 50px auto;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.brands {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 50px 30px;
+}
+
+.brand-image {
+  color: gray;
+}
+
+section {
+  background-color: white;
+  padding: 80px 40px;
+  border-top: 1px solid #dee2e6;
+}
+
+.brands {
+  padding: 80px 30px;
+}
+
+.values-desc {
+  font-size: 2rem;
+  color: #4dabf7;
+  text-align: center;
+}
+
+.value {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: stretch;
+  flex-basis: 100%;
+  overflow-x: hidden;
+}
+
+figure {
+  text-align: center;
+  background-color: #e9ecef;
+  width: 80%;
+  margin: auto;
+  padding: 40px 30px;
+  border-radius: 10px;
+}
+
+figure h3 {
+  font-size: 3.5rem;
+}
+
+.module-desc {
+  font-size: 1.8rem;
+  width: 80%;
+  margin: 20px auto;
+  line-height: 1.5;
+}
+
+.value-img {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.set-text {
+  width: 60%;
+  margin-top: 50px;
+}
+
+.settings-heading {
+  font-size: 2.8rem;
+}
+
+.heading-desc {
+  width: 90%;
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  line-height: 1.4;
+}
+
+.configs {
+  padding: 30px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 50px;
+}
+
+.config-img {
+  width: 40%;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #74c1fc26;
+  margin-bottom: 10px;
+}
+
+.svgs {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 25%;
+  top: 20%;
+}
+
+h4 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.config-desc {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.block {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.block-img {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
