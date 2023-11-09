@@ -245,6 +245,12 @@ section {
   background-color: white;
   padding: 80px 40px;
   border-top: 1px solid #dee2e6;
+  transition: all 1s ease-in;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
 }
 
 .brands {
