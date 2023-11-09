@@ -200,6 +200,7 @@ button {
 }
 
 .brands {
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -466,6 +467,45 @@ div.socials {
   margin-right: 30px;
 }
 
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.271);
+  backdrop-filter: blur(2px);
+  z-index: 150;
+  opacity: 1;
+  transition: inherit;
+}
+
+.mobile-nav {
+  position: fixed;
+  width: 100%;
+  top: 70px;
+  z-index: 200;
+  transition: inherit;
+  opacity: 0;
+}
+
+.menus {
+  width: 90%;
+  margin: 0px auto;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+
+.mobile-nav li {
+  padding: 15px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.293);
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  list-style-type: none;
+  color: #212529;
+}
+
 @media only screen and (max-width: 750px) {
   html {
     font-size: 60%;
@@ -598,6 +638,11 @@ div.socials {
   html {
     font-size: 55%;
   }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
   nav {
     display: none;
   }
@@ -623,6 +668,14 @@ div.socials {
 
   .text-block {
     width: 100%;
+  }
+
+  .brands {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
   aside {

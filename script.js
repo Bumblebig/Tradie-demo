@@ -1,5 +1,4 @@
 "use strict";
-console.log("connected");
 const slider = function () {
   const slides = document.querySelectorAll(".fig");
   const btnLeft = document.querySelector(".btn-left");
@@ -85,3 +84,26 @@ const slider = function () {
   setInterval(nextSlide, 8000);
 };
 slider();
+
+const hamburger = document.querySelector(".menu");
+const mobileNav = document.querySelector(".mobile-nav");
+const overlay = document.querySelector(".overlay");
+
+hamburger.addEventListener("click", function () {
+  overlay.classList.remove("hidden");
+  mobileNav.classList.remove("hidden");
+  setTimeout(() => {
+    mobileNav.style.opacity = 1;
+  }, 50);
+});
+
+overlay.addEventListener("click", function () {
+  setTimeout(() => {
+    mobileNav.style.opacity = 0;
+  }, 20);
+
+  setTimeout(() => {
+    mobileNav.classList.add("hidden");
+    overlay.classList.add("hidden");
+  }, 80);
+});
