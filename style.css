@@ -114,6 +114,9 @@ undefined .background li:nth-child(0) {
 
 body {
   width: 100%;
+  max-width: 1500px;
+  min-width: 350px;
+  margin: auto;
   font-family: "Rubik", sans-serif;
   font-size: 1.6rem;
   transition: all ease-in-out 0.8s;
@@ -123,7 +126,7 @@ body {
 
 header {
   color: white;
-  height: 100vh;
+  height: 100%;
 }
 
 .navigations {
@@ -131,6 +134,10 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px 30px;
+}
+
+.menu {
+  display: none;
 }
 
 nav li {
@@ -172,7 +179,7 @@ button {
 
 .header-text {
   width: 70%;
-  margin: 150px auto 50px auto;
+  margin: 80px auto 50px auto;
   text-align: center;
 }
 
@@ -436,7 +443,7 @@ footer h2 {
 
 .footer-desc {
   margin-top: 10px;
-  width: 40%;
+  width: 60%;
   line-height: 1.5;
   font-size: 1.4rem;
 }
@@ -457,4 +464,181 @@ div.socials {
   display: inline-block;
   cursor: pointer;
   margin-right: 30px;
+}
+
+@media only screen and (max-width: 750px) {
+  html {
+    font-size: 60%;
+  }
+
+  .header-text {
+    width: 80%;
+    /* margin: 0px; */
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .brands {
+    padding: 30px;
+  }
+
+  section {
+    padding: 40px 30px;
+  }
+
+  .value {
+    height: 65rem;
+  }
+
+  .fig-back {
+    width: 95%;
+    padding: 30px 20px;
+  }
+
+  figure h3 {
+    font-size: 3rem;
+  }
+
+  .module-desc {
+    width: 90%;
+    font-size: 1.6rem;
+  }
+
+  .value-img {
+    width: 60%;
+  }
+
+  .btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .btn-left {
+    left: 5px;
+  }
+
+  .btn-right {
+    right: 5px;
+  }
+
+  .btn p {
+    font-size: 3rem;
+    top: 10%;
+  }
+
+  .set-text {
+    width: 100%;
+    text-align: center;
+    margin: 40px auto 65px auto;
+  }
+
+  .heading-desc {
+    width: 100%;
+  }
+
+  .configs {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .config-img {
+    width: 60%;
+  }
+
+  .first {
+    order: 1;
+  }
+
+  .second {
+    order: 2;
+  }
+
+  .icon {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .svgs {
+    left: 0px;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  .block {
+    width: 90%;
+  }
+
+  .faq {
+    width: 80%;
+  }
+
+  .footer-desc {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  @keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(10) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+  html {
+    font-size: 55%;
+  }
+  nav {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .header-text {
+    margin-top: 40px;
+    width: 90%;
+  }
+
+  .desc {
+    margin-bottom: 30px;
+  }
+
+  .learn {
+    margin-bottom: 20px;
+  }
+
+  .text-block {
+    width: 100%;
+  }
+
+  aside {
+    flex-direction: column;
+  }
+
+  .footer-desc {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  div.socials {
+    margin: auto;
+  }
+
+  .social-icons {
+    width: 30px;
+  }
 }
