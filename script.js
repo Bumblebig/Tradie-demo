@@ -88,6 +88,7 @@ slider();
 const hamburger = document.querySelector(".menu");
 const mobileNav = document.querySelector(".mobile-nav");
 const overlay = document.querySelector(".overlay");
+const mobNavs = document.querySelectorAll(".mobile");
 
 hamburger.addEventListener("click", function () {
   overlay.classList.remove("hidden");
@@ -106,4 +107,50 @@ overlay.addEventListener("click", function () {
     mobileNav.classList.add("hidden");
     overlay.classList.add("hidden");
   }, 80);
+});
+
+mobNavs.forEach((el) => {
+  el.addEventListener("click", () => {
+    setTimeout(() => {
+      mobileNav.style.opacity = 0;
+    }, 5);
+
+    setTimeout(() => {
+      mobileNav.classList.add("hidden");
+      overlay.classList.add("hidden");
+    }, 10);
+  });
+});
+
+// /////////////////////////////
+const serviceDesk = document.querySelector(".service-desk");
+const guidesDesk = document.querySelector(".guides-desk");
+const faqDesk = document.querySelector(".faq-desk");
+const serviceMob = document.querySelector(".service-mobile");
+const guidesMob = document.querySelector(".guides-mobile");
+const faqMob = document.querySelector(".faq-mobile");
+
+const scroll = function (id) {
+  document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+};
+
+serviceDesk.addEventListener("click", () => {
+  scroll(".values");
+});
+serviceMob.addEventListener("click", () => {
+  scroll(".values");
+});
+
+guidesDesk.addEventListener("click", () => {
+  scroll(".settings");
+});
+guidesMob.addEventListener("click", () => {
+  scroll(".settings");
+});
+
+faqDesk.addEventListener("click", () => {
+  scroll(".faqs");
+});
+faqMob.addEventListener("click", () => {
+  scroll(".faqs");
 });

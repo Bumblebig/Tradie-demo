@@ -186,6 +186,16 @@ button {
 .title {
   font-size: 4.5rem;
   line-height: 1.1;
+  animation: title 1s ease-in-out;
+}
+
+@keyframes title {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .desc {
@@ -193,10 +203,30 @@ button {
   margin: 20px auto;
   font-size: 1.8rem;
   line-height: 1.5;
+  animation: desc 1.5s ease-in;
+}
+
+@keyframes desc {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .learn {
   margin-bottom: 50px;
+  animation: learn 0.7s ease-in;
+}
+
+@keyframes learn {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .brands {
