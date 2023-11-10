@@ -109,10 +109,14 @@
               price trends, allowing you to make timely decisions and maximize
               your investment potential.
             </p>
-            <div id="app">
-              <!-- Use the 'trading' component and pass the 'mydata' prop to it -->
+            <!-- <div id="app">
               <trading :data="mydata"></trading>
-            </div>
+            </div> -->
+
+            <div
+              id="chart_div"
+              style="width: 90%; height: 500px; margin: auto"
+            ></div>
           </div>
         </figure>
 
@@ -337,88 +341,63 @@
     <div class="overlay hidden"></div>
 
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
-    <!-- Include trading-vue-js from a CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/trading-vue-js@0.9.0/dist/trading-vue.min.js"></script>
-    <!-- JavaScript code for the Vue instance and trading component -->
-    <script>
-      // Create a new Vue instance
-      new Vue({
-        // Mount the Vue instance to the element with id 'app'
-        el: "#app",
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
 
-        // Define the data for the Vue instance
-        data() {
-          return {
-            // Define 'mydata' property with OHLCV data
-            mydata: {
-              ohlcv: [
-                [1551128400000, 33, 37.1, 14, 14, 196],
-                [1551132000000, 13.7, 30, 6.6, 30, 206],
-                [1551135600000, 29.9, 33, 21.3, 21.8, 74],
-                [1551139200000, 21.7, 25.9, 18, 24, 140],
-                [1551142800000, 24.1, 24.1, 24, 24.1, 29],
-              ],
-            },
-            // Define additional data for volatility and animation
-            volatility: 0,
-            animationInterval: null,
-            animationStep: 0,
-          };
-        },
+      function drawChart() {
+        // Your data
+        var chartData = [
+          ["Mon", 50, 50, 50, 50], // Initial stable price
+          ["Tue", 50, 50, 40, 40], // Fluctuation
+          ["Wed", 40, 40, 60, 60], // Fluctuation
+          ["Thu", 60, 60, 55, 55], // Fluctuation
+          ["Fri", 55, 55, 70, 70], // Fluctuation
+          ["Sat", 70, 70, 80, 80], // Steady increase
+          ["Sun", 80, 80, 90, 90], // Steady increase
+          // Additional fluctuation
+          ["Mon", 90, 90, 70, 70], // Fluctuation
+          ["Tue", 70, 70, 85, 85], // Fluctuation
+          ["Wed", 85, 85, 60, 60], // Fluctuation
+          ["Thu", 60, 60, 75, 75], // Fluctuation
+          ["Fri", 75, 75, 95, 95], // Fluctuation
+          ["Sat", 95, 95, 110, 110], // Steady increase
+          ["Sun", 110, 110, 120, 120],
+        ];
 
-        // Register the 'trading' component in the components option
-        components: {
-          trading: TradingVueJs.TradingVue, // Naming it 'trading'
-        },
+        var data = google.visualization.arrayToDataTable(chartData, true);
 
-        // Lifecycle hook: called when the Vue instance is created
-        created() {
-          // Calculate volatility on creation
-          this.calculateVolatility();
-
-          // Start progressive animation
-          this.startAnimation();
-        },
-
-        // Methods for the Vue instance
-        methods: {
-          // Method to calculate volatility
-          calculateVolatility() {
-            // Simple example: calculate the standard deviation of close prices
-            const closes = this.mydata.ohlcv.map((item) => item[4]);
-            const mean =
-              closes.reduce((sum, close) => sum + close, 0) / closes.length;
-            const differences = closes.map((close) =>
-              Math.pow(close - mean, 2)
-            );
-            const variance =
-              differences.reduce((sum, diff) => sum + diff, 0) /
-              differences.length;
-            this.volatility = Math.sqrt(variance);
+        var options = {
+          legend: "none",
+          bar: { groupWidth: "100%" }, // Remove space between bars.
+          candlestick: {
+            fallingColor: { strokeWidth: 0, fill: "#a52714" }, // red
+            risingColor: { strokeWidth: 0, fill: "#0f9d58" }, // green
           },
-
-          // Method to update data progressively for animation
-          updateDataProgressively() {
-            if (this.animationStep < this.mydata.ohlcv.length) {
-              // Update progressively
-              this.mydata.ohlcv.splice(this.animationStep, 1);
-              this.animationStep++;
-            } else {
-              // Stop animation when all data points are removed
-              clearInterval(this.animationInterval);
-            }
+          animation: {
+            startup: true, // Enable animation when the chart is drawn
+            duration: 5000, // Animation duration in milliseconds
+            easing: "out", // Animation easing function ('linear', 'in', 'out', 'inAndOut')
           },
+        };
 
-          // Method to start animation
-          startAnimation() {
-            this.animationInterval = setInterval(() => {
-              this.updateDataProgressively();
-              this.calculateVolatility();
-            }, 1000); // Adjust the interval based on your animation speed
-          },
-        },
-      });
+        var chartDiv = document.getElementById("chart_div");
+        var chart = new google.visualization.CandlestickChart(chartDiv);
+
+        function onAnimationFinish() {
+          setTimeout(function () {
+            chart.draw(data, options);
+          }, 3000);
+        }
+
+        google.visualization.events.addListener(
+          chart,
+          "animationfinish",
+          onAnimationFinish
+        );
+
+        chart.draw(data, options);
+      }
     </script>
   </body>
 </html>
