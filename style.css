@@ -393,6 +393,15 @@ figure h3 {
   line-height: 1.4;
 }
 
+#app {
+  max-width: 100%;
+}
+
+.trading-vue {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .configs {
   padding: 30px;
   width: 90%;

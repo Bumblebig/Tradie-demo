@@ -81,7 +81,7 @@ const slider = function () {
     }
   });
 
-  setInterval(nextSlide, 8000);
+  //   setInterval(nextSlide, 8000);
 };
 slider();
 

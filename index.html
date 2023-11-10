@@ -109,7 +109,10 @@
               price trends, allowing you to make timely decisions and maximize
               your investment potential.
             </p>
-            <img src="assets/price.jpg" alt="market-cap" class="value-img" />
+            <div id="app">
+              <!-- Use the 'trading' component and pass the 'mydata' prop to it -->
+              <trading :data="mydata"></trading>
+            </div>
           </div>
         </figure>
 
@@ -334,5 +337,88 @@
     <div class="overlay hidden"></div>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+    <!-- Include trading-vue-js from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/trading-vue-js@0.9.0/dist/trading-vue.min.js"></script>
+    <!-- JavaScript code for the Vue instance and trading component -->
+    <script>
+      // Create a new Vue instance
+      new Vue({
+        // Mount the Vue instance to the element with id 'app'
+        el: "#app",
+
+        // Define the data for the Vue instance
+        data() {
+          return {
+            // Define 'mydata' property with OHLCV data
+            mydata: {
+              ohlcv: [
+                [1551128400000, 33, 37.1, 14, 14, 196],
+                [1551132000000, 13.7, 30, 6.6, 30, 206],
+                [1551135600000, 29.9, 33, 21.3, 21.8, 74],
+                [1551139200000, 21.7, 25.9, 18, 24, 140],
+                [1551142800000, 24.1, 24.1, 24, 24.1, 29],
+              ],
+            },
+            // Define additional data for volatility and animation
+            volatility: 0,
+            animationInterval: null,
+            animationStep: 0,
+          };
+        },
+
+        // Register the 'trading' component in the components option
+        components: {
+          trading: TradingVueJs.TradingVue, // Naming it 'trading'
+        },
+
+        // Lifecycle hook: called when the Vue instance is created
+        created() {
+          // Calculate volatility on creation
+          this.calculateVolatility();
+
+          // Start progressive animation
+          this.startAnimation();
+        },
+
+        // Methods for the Vue instance
+        methods: {
+          // Method to calculate volatility
+          calculateVolatility() {
+            // Simple example: calculate the standard deviation of close prices
+            const closes = this.mydata.ohlcv.map((item) => item[4]);
+            const mean =
+              closes.reduce((sum, close) => sum + close, 0) / closes.length;
+            const differences = closes.map((close) =>
+              Math.pow(close - mean, 2)
+            );
+            const variance =
+              differences.reduce((sum, diff) => sum + diff, 0) /
+              differences.length;
+            this.volatility = Math.sqrt(variance);
+          },
+
+          // Method to update data progressively for animation
+          updateDataProgressively() {
+            if (this.animationStep < this.mydata.ohlcv.length) {
+              // Update progressively
+              this.mydata.ohlcv.splice(this.animationStep, 1);
+              this.animationStep++;
+            } else {
+              // Stop animation when all data points are removed
+              clearInterval(this.animationInterval);
+            }
+          },
+
+          // Method to start animation
+          startAnimation() {
+            this.animationInterval = setInterval(() => {
+              this.updateDataProgressively();
+              this.calculateVolatility();
+            }, 1000); // Adjust the interval based on your animation speed
+          },
+        },
+      });
+    </script>
   </body>
 </html>
