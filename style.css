@@ -114,7 +114,7 @@ undefined .background li:nth-child(0) {
 
 body {
   width: 100%;
-  max-width: 1500px;
+  max-width: 2000px;
   min-width: 350px;
   margin: auto;
   font-family: "Rubik", sans-serif;
@@ -229,18 +229,6 @@ button {
   }
 }
 
-.brands {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 50px 30px;
-}
-
-.brand-image {
-  color: gray;
-}
-
 section {
   background-color: white;
   padding: 80px 40px;
@@ -251,10 +239,6 @@ section {
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
-}
-
-.brands {
-  padding: 80px 30px;
 }
 
 .values {
@@ -306,6 +290,12 @@ figure {
 
 .btn-left {
   left: 30px;
+}
+
+div#chart_div {
+  width: 90%;
+  height: 500px;
+  margin: auto;
 }
 
 .btn p {
@@ -566,10 +556,6 @@ div.socials {
     font-size: 4rem;
   }
 
-  .brands {
-    padding: 30px;
-  }
-
   section {
     padding: 40px 30px;
   }
@@ -714,14 +700,6 @@ div.socials {
 
   .text-block {
     width: 100%;
-  }
-
-  .brands {
-    padding-left: 10px;
-    padding-right: 10px;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 10px;
   }
 
   aside {

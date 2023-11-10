@@ -81,7 +81,7 @@ const slider = function () {
     }
   });
 
-  //   setInterval(nextSlide, 8000);
+  setInterval(nextSlide, 8000);
 };
 slider();
 
@@ -156,7 +156,7 @@ faqMob.addEventListener("click", () => {
 });
 
 document.querySelector(".learn").addEventListener("click", function () {
-  scroll(".brands");
+  scroll(".values");
 });
 
 // Reveal sections
