@@ -29,6 +29,23 @@ body {
   transition: all ease-in-out 0.8s;
   color: #212529;
   overflow-x: hidden;
+  position: relative;
+}
+
+.translate {
+  position: fixed;
+  right: 0px;
+  bottom: 20px;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  width: max-content;
+  background-color: #219ebc;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  z-index: 90;
+  padding: 10px 20px;
+  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.205);
 }
 
 header {
@@ -290,10 +307,9 @@ div#chart_div {
   margin: auto;
   background-color: #e9ecef;
   color: #212529;
-  backdrop-filter: blur(1px);
   border-radius: 10px;
   padding: 40px 30px;
-  box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, 0.068);
+  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.076);
 }
 
 figure h3 {
@@ -310,6 +326,7 @@ figure h3 {
 .value-img {
   width: 70%;
   margin: 10px auto;
+  height: 450px;
 }
 
 .hidden {
@@ -347,17 +364,23 @@ figure h3 {
 .configs {
   /* padding: 30px; */
   padding-top: 0px;
+  padding-right: 20px;
+  padding-left: 20px;
   width: 100%;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 80px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .config-img {
   width: 130%;
+}
+
+.second {
+  padding-left: 20px;
 }
 
 .icon {
@@ -381,8 +404,19 @@ h4 {
   margin-bottom: 30px;
 }
 
+h5 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
 .config-desc {
   font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.sub-desc {
+  font-size: 1.7rem;
   line-height: 1.5;
 }
 
@@ -394,22 +428,68 @@ h4 {
 
 .block-img {
   display: block;
-  width: 80%;
+  width: 50%;
   margin: auto;
 }
 
 .faq {
-  width: 60%;
+  width: 80%;
   margin: 30px auto;
-  height: 200px;
-  border: 1px solid #212529;
 }
 
-.faq-desc {
-  color: #868e96;
-  text-align: center;
-  margin: 100px auto;
+.faq-item {
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+  border-bottom: 1px solid rgb(39, 39, 39);
 }
+
+.first-faq {
+  border-top: 1px solid rgb(39, 39, 39);
+}
+
+.question {
+  font-size: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 0px;
+}
+
+.arr-down {
+  width: 30px;
+  transition: opacity 0.8s ease, height 0.5s ease;
+}
+
+.answer {
+  width: 95%;
+  margin: auto;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #495057;
+  transition: opacity 0.8s ease, height 0.5s ease;
+  display: none;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.visible {
+  display: block;
+}
+
+.anim {
+  opacity: 1;
+  height: auto;
+}
+
+.arr-up {
+  transform: rotateX(180deg);
+}
+
+/* FOOTER SECTION */
 
 footer {
   width: 100%;
@@ -449,11 +529,16 @@ div.socials {
   align-items: flex-start;
 }
 
+.social-ink {
+  display: inline-block;
+}
+
 .social-icons {
   width: 30px;
   display: inline-block;
   cursor: pointer;
   margin-right: 30px;
+  height: 29px;
 }
 
 .overlay {
@@ -580,6 +665,7 @@ div.socials {
 
   .second {
     order: 2;
+    padding-left: 0px;
   }
 
   .icon {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demo</title>
+    <title>Tradie | Welcome</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,59 +13,52 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <ul class="background">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul> -->
-
+    <p class="translate">Vietnamese</p>
     <header>
-      <div class="navigations">
-        <h1>TRADIE</h1>
-        <nav>
-          <li class="service-desk">Services</li>
-          <li class="guides-desk">Guides</li>
-          <li class="faq-desk">FAQ</li>
-          <li class="button">
-            <a href="https://tradie.vn/" class="links btn-links">Get Started</a>
-          </li>
-        </nav>
+      <div class="header-cont">
+        <div class="navigations">
+          <h1>TRADIE</h1>
+          <nav>
+            <li class="service-desk">Services</li>
+            <li class="guides-desk">Guides</li>
+            <li class="faq-desk">FAQ</li>
+            <li class="button">
+              <a href="https://tradie.vn/" class="links btn-links started"
+                >Get Started</a
+              >
+            </li>
+          </nav>
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="menu"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-      </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="menu"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
 
-      <div class="header-text">
-        <h1 class="title">
-          Fundamental analysis, Price action and Technical analysis data
-        </h1>
-        <p class="desc">
-          By leveraging the intuitive interface of the Settings and Record
-          pages, you can optimize your trading strategies, stay informed about
-          market trends, and make data-driven decisions for a successful trading
-          journey.
-        </p>
-        <button class="button learn">Learn More</button>
+        <div class="header-text">
+          <div class="htext-cont">
+            <h1 class="title">
+              Fundamental analysis, Price action and Technical analysis data
+            </h1>
+            <p class="desc">
+              By leveraging the intuitive interface of the Settings and Record
+              pages, you can optimize your trading strategies, stay informed
+              about market trends, and make data-driven decisions for a
+              successful trading journey.
+            </p>
+          </div>
+          <button class="button learn">Learn More</button>
+        </div>
       </div>
       <video autoplay muted loop id="background-video">
         <source src="assets/illustration.mp4" type="video/mp4" />
@@ -76,62 +69,70 @@
     <section class="values section--hidden section">
       <div class="btn btn-left"><p><</p></div>
       <div class="btn btn-right"><p>></p></div>
-      <p class="values-desc">We deliver these services in real-time</p>
-      <div class="value">
-        <figure class="fig">
-          <div class="fig-back">
-            <h3>Fundamental Analysis</h3>
-            <p class="module-desc">
-              Utilize our comprehensive Fundamental Analysis module to gain
-              insights into key market metrics. Monitor the market cap, volume,
-              funding rate, and long-short positions ratio in the future market
-              effortlessly. Make informed investment decisions based on
-              real-time data analysis and stay ahead of market trends.
-            </p>
+      <div class="value-cont">
+        <p class="values-desc serv-desc">
+          We deliver these services in real-time
+        </p>
+        <div class="value">
+          <figure class="fig">
+            <div class="fig-back">
+              <div class="fig-1">
+                <h3>Fundamental Analysis</h3>
+                <p class="module-desc">
+                  Utilize our comprehensive Fundamental Analysis module to gain
+                  insights into key market metrics. Monitor the market cap,
+                  volume, funding rate, and long-short positions ratio in the
+                  future market effortlessly. Make informed investment decisions
+                  based on real-time data analysis and stay ahead of market
+                  trends.
+                </p>
+              </div>
 
-            <div class="value-img cont-1"></div>
-          </div>
-        </figure>
+              <div class="value-img cont-1"></div>
+            </div>
+          </figure>
 
-        <figure class="fig">
-          <div class="fig-back">
-            <h3>Price change Real-time monitoring</h3>
-            <p class="module-desc">
-              Stay ahead of market volatility with our dynamic Price Change
-              Real-Time Monitoring. Monitor price fluctuations across 11
-              different time frames, ensuring you never miss sudden market
-              movements. Our interactive charts provide a comprehensive view of
-              price trends, allowing you to make timely decisions and maximize
-              your investment potential.
-            </p>
-            <!-- <div id="app">
-              <trading :data="mydata"></trading>
-            </div> -->
+          <figure class="fig">
+            <div class="fig-back">
+              <div class="fig-2">
+                <h3>Price change Real-time monitoring</h3>
+                <p class="module-desc">
+                  Stay ahead of market volatility with our dynamic Price Change
+                  Real-Time Monitoring. Monitor price fluctuations across 11
+                  different time frames, ensuring you never miss sudden market
+                  movements. Our interactive charts provide a comprehensive view
+                  of price trends, allowing you to make timely decisions and
+                  maximize your investment potential.
+                </p>
+              </div>
 
-            <!-- <div id="chart_div"></div> -->
-            <div class="value-img cont-2"></div>
-          </div>
-        </figure>
+              <div class="value-img cont-2"></div>
+            </div>
+          </figure>
 
-        <figure class="fig">
-          <div class="fig-back">
-            <h3>Technical Analysis</h3>
-            <p class="module-desc">
-              Refine your trading strategies with our advanced Technical
-              Analysis module. Gain insights from digitized representations of
-              key technical indicators, including RSI, Bollinger bands, and
-              Fibonacci Retracement. Visualize market trends with precision and
-              make data-driven decisions to optimize your trading performance
-            </p>
-            <div class="value-img cont-3"></div>
-          </div>
-        </figure>
+          <figure class="fig">
+            <div class="fig-back">
+              <div class="fig-3">
+                <h3>Technical Analysis</h3>
+                <p class="module-desc">
+                  Refine your trading strategies with our advanced Technical
+                  Analysis module. Gain insights from digitized representations
+                  of key technical indicators, including RSI, Bollinger bands,
+                  and Fibonacci Retracement. Visualize market trends with
+                  precision and make data-driven decisions to optimize your
+                  trading performance.
+                </p>
+              </div>
+              <div class="value-img cont-3"></div>
+            </div>
+          </figure>
+        </div>
       </div>
       <div class="dots"></div>
     </section>
 
     <section class="settings section--hidden section">
-      <p class="values-desc">User Guides</p>
+      <p class="values-desc guides-desc">User Guides</p>
 
       <div class="set-text">
         <h3 class="settings-heading">Customise Your Trading Experience</h3>
@@ -143,90 +144,26 @@
       </div>
 
       <div class="configs">
-        <div class="config-img config-1"></div>
-        <div class="text-block">
-          <div class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="svgs"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
-              />
-            </svg>
-          </div>
-          <h4>Configure your presence</h4>
+        <div class="config-img config-2"></div>
+        <div class="text-block txtb-1">
+          <h4>Step 1: Configure your presence</h4>
           <p class="config-desc">
             Easily access the Settings page and adjust your desired conditions.
             Choose from a range of technical analysis strategies and fundamental
             analysis parameters to tailor your investment approach.
           </p>
-        </div>
-      </div>
-
-      <div class="configs">
-        <div class="text-block second">
-          <div class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="svgs"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z"
-              />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-              />
-            </svg>
-          </div>
-          <h4>Advanced Configuration</h4>
-          <p class="config-desc">
+          <h5>Advanced Configuration</h5>
+          <p class="sub-desc">
             Utilize our advanced settings for a more nuanced trading strategy.
             Create logical groups and specify multiple conditions to refine your
             data filtering and achieve precise results.
           </p>
         </div>
-        <img
-          src="assets/records.png"
-          alt="customize"
-          class="config-img first"
-        />
       </div>
 
       <div class="configs">
-        <img src="assets/advanced.png" alt="customize" class="config-img" />
-        <div class="text-block">
-          <div class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="svgs"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-              />
-            </svg>
-          </div>
-          <h4>Access Your Customized Results</h4>
+        <div class="text-block second txtb-2">
+          <h4>Step 2: Access Your Customized Results</h4>
           <p class="config-desc">
             Check the Record page to view a list of cryptocurrencies that match
             your specified criteria. Tradie calculates and lists the most
@@ -234,12 +171,26 @@
             trading decisions.
           </p>
         </div>
+        <div class="config-img config-3 first"></div>
+      </div>
+
+      <div class="configs">
+        <div class="config-img config-1"></div>
+        <div class="text-block txtb-3">
+          <h4>Step 3: Set Up Telegram Notification</h4>
+          <p class="config-desc">
+            In case the Record page does not display any results, you have the
+            option to configure Telegram notifications. This way, whenever a
+            cryptocurrency meets all specified conditions, Tradie will promptly
+            send you an alert.
+          </p>
+        </div>
       </div>
 
       <div class="block">
-        <h4>Unlock Your trading Potentials</h4>
-        <img src="assets/pages.png" alt="pages" class="block-img" />
-        <p class="config-desc">
+        <h4 class="block-4">Unlock Your trading Potentials</h4>
+        <div class="block-img config-4"></div>
+        <p class="config-desc text-4">
           By leveraging the intuitive interface of the Settings and Record
           pages, you can optimize your trading strategies, stay informed about
           market trends, and make data-driven decisions for a successful trading
@@ -251,13 +202,187 @@
     <section class="faqs section--hidden section">
       <p class="values-desc">FAQs</p>
       <div class="faq">
-        <p class="faq-desc">FAQs goes here...</p>
+        <article class="faq-item first-faq faq-1">
+          <h4 class="question">
+            What is Tradie, and how does it benefit cryptocurrency investors
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="arr-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </h4>
+          <p class="answer">
+            Tradie is a comprehensive crypto monitoring app that provides
+            Fundamental analysis, Price action, and Technical analysis data. It
+            benefits investors by offering timely insights for making informed
+            trading decisions.
+          </p>
+        </article>
+
+        <article class="faq-item faq-2">
+          <h4 class="question">
+            Can I use Tradie in different languages
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="arr-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </h4>
+          <p class="answer">
+            Tradie supports multiple languages, including English and
+            Vietnamese. Users can switch between these languages based on their
+            preference.
+          </p>
+        </article>
+
+        <article class="faq-item faq-3">
+          <h4 class="question">
+            What does Tradie offer
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="arr-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </h4>
+          <p class="answer">
+            Tradie offers Fundamental Analysis, Price Change Real-time
+            Monitoring and Technical Analysis.
+          </p>
+        </article>
+
+        <article class="faq-item faq-4">
+          <h4 class="question">
+            How does Tradie handle sudden market fluctuations
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="arr-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </h4>
+          <p class="answer">
+            Tradie identifies sudden fluctuations and promptly notifies users,
+            allowing them to stay informed about market changes.
+          </p>
+        </article>
+
+        <article class="faq-item faq-5">
+          <h4 class="question">
+            How can I customize my crypto data preferences on Tradie
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="arr-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </h4>
+          <p class="answer">
+            Users can configure their desired conditions on the Settings page.
+            For example, combining RSI and Bollinger Bands in the Technical
+            analysis strategy involves going to "Settings" -> "Advanced" and
+            setting conditions based on user preferences.
+          </p>
+        </article>
+
+        <article class="faq-item faq-6">
+          <h4 class="question">
+            What information is available on the Record page
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="arr-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </h4>
+          <p class="answer">
+            The Record page displays the results of users' configured
+            conditions. If users set conditions related to indicators like RSI
+            and Bollinger Bands, Tradie calculates and lists coins falling into
+            specified zones, providing a clear overview of market conditions.
+          </p>
+        </article>
+
+        <article class="faq-item faq-7">
+          <h4 class="question">
+            How does Tradie help users find the best entry points in the market
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="arr-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </h4>
+          <p class="answer">
+            Tradie's comprehensive solutions and real-time monitoring modules
+            enable users to identify optimal entry points at the earliest
+            possible time, aiding in strategic decision-making.
+          </p>
+        </article>
       </div>
     </section>
 
     <footer class="section--hidden section">
       <aside>
-        <div>
+        <div class="foot-text">
           <h2 class="footer-heading">TRADIE</h2>
           <p class="footer-desc">
             Tradie is a cutting-edge crypto monitoring application designed to
@@ -271,52 +396,64 @@
         </div>
 
         <div class="socials">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            class="social-icons"
+          <a href="https://www.facebook.com/tradie.2023/" class="social-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="social-icons"
+            >
+              <style>
+                svg {
+                  fill: #ffffff;
+                }
+              </style>
+              <path
+                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://www.youtube.com/@tradie_crypto"
+            class="social-link youtube-cont"
           >
-            <style>
-              svg {
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            class="social-icons"
-          >
-            <style>
-              svg {
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            class="social-icons"
-          >
-            <style>
-              svg {
-                fill: #ffffff;
-              }
-            </style>
-            <path
-              d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z"
-            />
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 576 512"
+              class="social-icons youtube"
+            >
+              <style>
+                svg {
+                  fill: #ffffff;
+                }
+              </style>
+              <path
+                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+              />
+            </svg>
+          </a>
+          <a href="https://t.me/tradie_crypto" class="social-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 496 512"
+              class="social-icons"
+            >
+              <style>
+                svg {
+                  fill: #ffffff;
+                }
+              </style>
+              <path
+                d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"
+              />
+            </svg>
+          </a>
         </div>
       </aside>
 
-      <p class="copyright">&copy; Tradie. All rights reserved.</p>
+      <p class="copyright">
+        &copy; Tradie. <span class="copyrights">All rights reserved.</span>
+      </p>
     </footer>
 
     <div class="mobile-nav hidden">
@@ -328,7 +465,6 @@
       </div>
     </div>
     <div class="overlay hidden"></div>
-
     <script src="script.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
@@ -350,6 +486,9 @@
       loadLottieAnimation("assets/price-change.json", ".cont-2");
       loadLottieAnimation("assets/tech-analysis.json", ".cont-3");
       loadLottieAnimation("assets/configure.json", ".config-1");
+      loadLottieAnimation("assets/advanced.json", ".config-2");
+      loadLottieAnimation("assets/customised.json", ".config-3");
+      loadLottieAnimation("assets/potentials.json", ".config-4");
     </script>
   </body>
 </html>
