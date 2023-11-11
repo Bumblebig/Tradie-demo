@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <ul class="background">
+    <!-- <ul class="background">
       <li></li>
       <li></li>
       <li></li>
@@ -25,7 +25,7 @@
       <li></li>
       <li></li>
       <li></li>
-    </ul>
+    </ul> -->
 
     <header>
       <div class="navigations">
@@ -34,7 +34,9 @@
           <li class="service-desk">Services</li>
           <li class="guides-desk">Guides</li>
           <li class="faq-desk">FAQ</li>
-          <li class="button">Get Started</li>
+          <li class="button">
+            <a href="https://tradie.vn/" class="links btn-links">Get Started</a>
+          </li>
         </nav>
 
         <svg
@@ -65,6 +67,10 @@
         </p>
         <button class="button learn">Learn More</button>
       </div>
+      <video autoplay muted loop id="background-video">
+        <source src="assets/illustration.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </header>
 
     <section class="values section--hidden section">
@@ -82,11 +88,8 @@
               effortlessly. Make informed investment decisions based on
               real-time data analysis and stay ahead of market trends.
             </p>
-            <img
-              src="assets/market-cap.png"
-              alt="market-cap"
-              class="value-img"
-            />
+
+            <div class="value-img cont-1"></div>
           </div>
         </figure>
 
@@ -105,7 +108,8 @@
               <trading :data="mydata"></trading>
             </div> -->
 
-            <div id="chart_div"></div>
+            <!-- <div id="chart_div"></div> -->
+            <div class="value-img cont-2"></div>
           </div>
         </figure>
 
@@ -119,11 +123,7 @@
               Fibonacci Retracement. Visualize market trends with precision and
               make data-driven decisions to optimize your trading performance
             </p>
-            <img
-              src="assets/fluctuations.jpg"
-              alt="market-cap"
-              class="value-img"
-            />
+            <div class="value-img cont-3"></div>
           </div>
         </figure>
       </div>
@@ -143,7 +143,7 @@
       </div>
 
       <div class="configs">
-        <img src="assets/customize.png" alt="customize" class="config-img" />
+        <div class="config-img config-1"></div>
         <div class="text-block">
           <div class="icon">
             <svg
@@ -316,7 +316,7 @@
         </div>
       </aside>
 
-      <p class="copyright">&copy; Tradie, 2023</p>
+      <p class="copyright">&copy; Tradie. All rights reserved.</p>
     </footer>
 
     <div class="mobile-nav hidden">
@@ -331,67 +331,25 @@
 
     <script src="script.js"></script>
 
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script>
+      function loadLottieAnimation(animationPath, containerId) {
+        var container = document.querySelector(containerId);
 
-    <script type="text/javascript">
-      google.charts.load("current", { packages: ["corechart"] });
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        // Your data
-        var chartData = [
-          ["Mon", 20, 20, 20, 20], // Initial stable price
-          ["Tue", 20, 20, 15, 15], // Strong fluctuation
-          ["Wed", 15, 15, 25, 25], // Strong fluctuation
-          ["Thu", 25, 25, 20, 20], // Strong fluctuation
-          ["Fri", 20, 20, 30, 30], // Strong fluctuation
-          ["Sat", 30, 30, 35, 35], // Kept going up
-          ["Sun", 35, 35, 40, 40], // Kept going up
-          ["Mon", 40, 40, 38, 38], // Slight fluctuation
-          ["Tue", 38, 38, 45, 45], // Slight fluctuation
-          ["Wed", 42, 42, 50, 50], // Slight fluctuation
-          ["Thu", 48, 48, 55, 55], // Slight fluctuation
-          ["Fri", 52, 52, 60, 60], // Slight fluctuation
-          ["Sat", 58, 58, 65, 65], // Kept going up
-          ["Sun", 62, 62, 70, 70], // Kept going up
-        ];
-
-        var data = google.visualization.arrayToDataTable(chartData, true);
-
-        var options = {
-          legend: "none",
-          bar: { groupWidth: "100%" }, // Remove space between bars.
-          candlestick: {
-            fallingColor: { strokeWidth: 0, fill: "#a52714" }, // red
-            risingColor: { strokeWidth: 0, fill: "#0f9d58" }, // green
-          },
-          animation: {
-            startup: true, // Enable animation when the chart is drawn
-            duration: 4000, // Animation duration in milliseconds
-            easing: "inAndOut", // Animation easing function ('linear', 'in', 'out', 'inAndOut')
-          },
-        };
-
-        var chartDiv = document.getElementById("chart_div");
-        var chart = new google.visualization.CandlestickChart(chartDiv);
-
-        function onAnimationFinish() {
-          setTimeout(function () {
-            chart.draw(data, options);
-          }, 4000);
-        }
-
-        google.visualization.events.addListener(
-          chart,
-          "animationfinish",
-          onAnimationFinish
-        );
-
-        chart.draw(data, options);
+        // Initialize Lottie
+        var anim = bodymovin.loadAnimation({
+          container: container,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: animationPath,
+        });
       }
+
+      loadLottieAnimation("assets/fin-illu.json", ".cont-1");
+      loadLottieAnimation("assets/price-change.json", ".cont-2");
+      loadLottieAnimation("assets/tech-analysis.json", ".cont-3");
+      loadLottieAnimation("assets/configure.json", ".config-1");
     </script>
   </body>
 </html>
