@@ -66,9 +66,27 @@ const slider = function () {
   };
   init();
 
+  let interval;
+
+  const startSlider = function () {
+    interval = setInterval(nextSlide, 8000);
+  };
+
+  const stopSlider = function () {
+    clearInterval(interval);
+  };
+
   // Event handlers
-  btnRight.addEventListener("click", nextSlide);
-  btnLeft.addEventListener("click", prevSlide);
+  btnRight.addEventListener("click", function () {
+    nextSlide();
+    stopSlider();
+    startSlider();
+  });
+  btnLeft.addEventListener("click", function () {
+    prevSlide();
+    stopSlider();
+    startSlider();
+  });
 
   document.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") prevSlide();
@@ -83,7 +101,7 @@ const slider = function () {
     }
   });
 
-  setInterval(nextSlide, 8000);
+  startSlider();
 };
 slider();
 
