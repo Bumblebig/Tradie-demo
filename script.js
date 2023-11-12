@@ -212,6 +212,29 @@ const toggleFAQ = function () {
 toggleFAQ();
 
 //////////////////////////////////////////////////////////////////////////////////
+// STICKY NAV
+const headSection = document.querySelector("header");
+const navigate = document.querySelector(".navigations");
+
+const navHeight = navigate.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  // console.log(entry);
+
+  if (!entry.isIntersecting) navigate.classList.add("sticky");
+  else navigate.classList.remove("sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+
+headerObserver.observe(headSection);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // TRANSLATION
 let state = true;
@@ -539,6 +562,7 @@ translateBtn.addEventListener("click", function () {
           </p>`;
 
     document.querySelector(".copyrights").textContent = "Đã đăng ký Bản quyền.";
+    document.querySelector(".mob-action").textContent = "Bắt đầu";
 
     toggleFAQ();
     // Flip state
@@ -828,6 +852,7 @@ translateBtn.addEventListener("click", function () {
           </p>`;
 
     document.querySelector(".copyrights").textContent = "All rights reserved.";
+    document.querySelector(".mob-action").textContent = "Get Started";
 
     toggleFAQ();
     // Flip state

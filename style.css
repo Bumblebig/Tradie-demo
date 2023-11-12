@@ -24,7 +24,7 @@ body {
   /* max-width: 2000px; */
   min-width: 350px;
   margin: auto;
-  font-family: "Rubik", sans-serif;
+  font-family: "Sofia Sans", sans-serif;
   font-size: 1.6rem;
   transition: all ease-in-out 0.8s;
   color: #212529;
@@ -35,7 +35,7 @@ body {
 .translate {
   position: fixed;
   right: 0px;
-  bottom: 20px;
+  bottom: 40px;
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
@@ -53,7 +53,7 @@ header {
   color: white;
   height: 100%;
   position: relative;
-  background-color: rgba(34, 38, 42, 0.296);
+  background-color: rgba(34, 38, 42, 0.409);
   /* background: #339af0; */
   padding: 20px 10px 80px 10px;
 }
@@ -76,6 +76,22 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px 30px;
+}
+
+.navigations.sticky {
+  width: 100%;
+  position: fixed;
+  background: linear-gradient(
+    to bottom,
+    rgba(32, 32, 32, 0.472) 1%,
+    rgba(32, 32, 32, 0)
+  );
+  top: 0px;
+  left: 0px;
+  z-index: 80;
+  color: white;
+
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.01);
 }
 
 .menu {
@@ -560,6 +576,7 @@ div.socials {
   z-index: 200;
   transition: inherit;
   opacity: 0;
+  /* padding: 30px 0px; */
 }
 
 .menus {
@@ -571,12 +588,19 @@ div.socials {
 }
 
 .mobile-nav li {
-  padding: 15px 0px;
+  padding: 20px 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.293);
   cursor: pointer;
   text-align: center;
   display: block;
   list-style-type: none;
+  color: #212529;
+}
+
+.mobile-nav li a.mob-start:link,
+.mobile-nav li a.mob-start:link:visited {
+  text-decoration: none;
+  display: inline-block;
   color: #212529;
 }
 
@@ -756,5 +780,11 @@ div.socials {
 
   .social-icons {
     width: 30px;
+  }
+
+  .mob-action:link,
+  .mob-action:visited {
+    color: #212529;
+    text-decoration: none;
   }
 }
