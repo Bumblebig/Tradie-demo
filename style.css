@@ -350,9 +350,9 @@ figure h3 {
   margin: 10px auto 0px auto;
 }
 
-#app {
+/* #app {
   max-width: 100%;
-}
+} */
 
 /* .trading-vue {
   width: 100%;
@@ -555,7 +555,7 @@ div.socials {
 .mobile-nav {
   position: fixed;
   width: 100%;
-  top: 70px;
+  top: 100px;
   z-index: 200;
   transition: inherit;
   opacity: 0;
@@ -876,7 +876,7 @@ div.socials {
   }
 
   h1 {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
 
   nav li {
@@ -905,16 +905,24 @@ div.socials {
     font-size: 2.4rem;
   }
 
+  .value {
+    height: 90rem;
+  }
+
   .values-desc {
-    font-size: 2.6rem;
+    font-size: 3rem;
+  }
+
+  .fig-back {
+    padding: 40px 30px;
   }
 
   .btn-right {
-    right: 30px;
+    right: 20px;
   }
 
   .btn-left {
-    left: 30px;
+    left: 20px;
   }
 
   .dots__dot {
@@ -923,71 +931,221 @@ div.socials {
   }
 
   .btn p {
-    font-size: 3.7rem;
+    font-size: 3.4rem;
   }
 
   figure h3 {
-    font-size: 4.8rem;
-  }
-
-  .module-desc {
-    font-size: 3rem;
-    /* margin: 40px auto; */
-  }
-
-  .value-img {
-    height: 650px;
-  }
-
-  .settings-heading {
-    font-size: 4.6rem;
-  }
-
-  .heading-desc {
-    font-size: 3rem;
-  }
-
-  h4 {
-    font-size: 4rem;
-  }
-
-  h5 {
     font-size: 3.8rem;
   }
 
+  .module-desc {
+    font-size: 2.4rem;
+    margin: 20px auto 10px auto;
+  }
+
+  .value-img {
+    height: 500px;
+  }
+
+  .set-text {
+    margin-bottom: 40px;
+  }
+
+  .settings-heading {
+    font-size: 3.5rem;
+  }
+
+  .second {
+    padding-left: 30px;
+  }
+
+  .configs {
+    padding: 0px 50px;
+    gap: 90px;
+  }
+
+  .config-img {
+    width: 80%;
+  }
+
+  .heading-desc {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 3.4rem;
+  }
+
+  h5 {
+    font-size: 3.2rem;
+  }
+
   .config-desc {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
   }
 
   .sub-desc {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
   }
 
   .question {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 
   .answer {
+    font-size: 2rem;
+  }
+
+  .footer-heading {
     font-size: 2.8rem;
   }
 
-  footer {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
-
   .footer-desc {
-    font-size: 2.6rem;
+    font-size: 2rem;
   }
 
   .social-icons {
-    width: 50px;
-    height: 50x;
-    margin-right: 50px;
+    width: 35px;
+    height: 35x;
+    margin-right: 30px;
   }
 
   .copyright {
-    font-size: 2.6rem;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .translate {
+    font-size: 1.8rem;
+  }
+
+  html {
+    font-size: 60%;
+  }
+
+  .header-text {
+    width: 80%;
+  }
+
+  .desc {
+    font-size: 2.4rem;
+  }
+
+  .title {
+    font-size: 4.4rem;
+  }
+
+  .learn {
+    font-size: 2.2rem;
+  }
+
+  .value {
+    height: 80rem;
+  }
+
+  .values-desc {
+    font-size: 2.8rem;
+  }
+
+  .fig-back {
+    padding: 30px;
+  }
+
+  .btn-right {
+    right: 10px;
+  }
+
+  .btn-left {
+    left: 10px;
+  }
+
+  .btn p {
+    font-size: 3rem;
+  }
+
+  figure h3 {
+    font-size: 3.6rem;
+  }
+
+  .module-desc {
+    width: 90%;
+    font-size: 2.2rem;
+  }
+
+  .value-img {
+    width: 70%;
+    height: 400px;
+  }
+
+  .settings-heading {
+    font-size: 3.4rem;
+  }
+
+  .heading-desc {
+    width: 80%;
+    font-size: 2.4rem;
+  }
+
+  .configs {
+    gap: 30px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .second {
+    padding-left: 10px;
+  }
+
+  .config-img {
+    width: 100%;
+  }
+
+  h4 {
+    font-size: 2.9rem;
+  }
+  h5 {
+    font-size: 2.7rem;
+  }
+
+  .config-desc {
+    font-size: 2rem;
+  }
+
+  .sub-desc {
+    font-size: 1.9rem;
+  }
+
+  .faq {
+    width: 100%;
+  }
+
+  .question {
+    font-size: 2.2rem;
+  }
+
+  .answer {
+    font-size: 2rem;
+  }
+
+  footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .footer-desc {
+    font-size: 1.8rem;
+    width: 80%;
+  }
+
+  .copyright {
+    font-size: 1.8rem;
+  }
+
+  .social-icons {
+    width: 28px;
+    margin-right: 20px;
+    height: 28px;
   }
 }
 
@@ -996,21 +1154,67 @@ div.socials {
     font-size: 60%;
   }
 
+  .translate {
+    font-size: 1.6rem;
+    bottom: 30px;
+    padding: 10px;
+  }
+
+  header {
+    padding-top: 10px;
+  }
+
+  .navigations {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  nav li {
+    font-size: 1.8rem;
+    margin-right: 20px;
+  }
+
+  .button {
+    padding: 10px;
+  }
+
   .header-text {
-    width: 80%;
+    width: 90%;
     /* margin: 0px; */
   }
 
+  .htext-cont {
+    margin-bottom: 20px;
+  }
+
   .title {
-    font-size: 4rem;
+    font-size: 3.6rem;
+  }
+
+  .desc {
+    font-size: 1.8rem;
+    margin-top: 10px;
+  }
+
+  .learn {
+    font-size: 1.6rem;
   }
 
   section {
     padding: 40px 30px;
   }
 
+  .values-desc {
+    font-size: 2.2rem;
+  }
+
   .value {
-    height: 65rem;
+    margin-top: 40px;
+    height: 75rem;
   }
 
   .fig-back {
@@ -1024,7 +1228,7 @@ div.socials {
 
   .module-desc {
     width: 90%;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .value-img {
@@ -1032,8 +1236,11 @@ div.socials {
   }
 
   .btn {
-    width: 40px;
-    height: 40px;
+    padding: 5px 10px;
+  }
+
+  .btn p {
+    font-size: 2.6rem;
   }
 
   .btn-left {
@@ -1044,19 +1251,20 @@ div.socials {
     right: 5px;
   }
 
-  .btn p {
-    font-size: 3rem;
-    top: 10%;
-  }
-
   .set-text {
     width: 100%;
     text-align: center;
     margin: 40px auto 65px auto;
   }
 
-  .heading-desc {
+  p.heading-desc {
     width: 100%;
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  .settings-heading {
+    font-size: 2.8rem;
   }
 
   .configs {
@@ -1079,46 +1287,53 @@ div.socials {
     padding-left: 0px;
   }
 
-  .icon {
-    margin: auto;
-    margin-bottom: 10px;
-  }
-
-  .svgs {
-    left: 0px;
-  }
-
   h4 {
     margin-bottom: 20px;
   }
 
   .block {
     width: 90%;
+    margin-top: 50px;
   }
 
-  .faq {
-    width: 80%;
+  .faq,
+  .faq-item {
+    width: 100%;
+  }
+
+  .question {
+    font-size: 2rem;
+  }
+
+  .answer {
+    font-size: 1.8rem;
+  }
+
+  .arr-down {
+    width: 20px;
+  }
+
+  .footer-heading {
+    font-size: 2.7rem;
   }
 
   .footer-desc {
     width: 70%;
+    font-size: 1.8rem;
+  }
+
+  .copyright {
+    font-size: 1.8rem;
   }
 }
 
 @media only screen and (max-width: 550px) {
-  @keyframes cube {
-    from {
-      transform: scale(0) rotate(0deg) translate(-50%, -50%);
-      opacity: 1;
-    }
-    to {
-      transform: scale(10) rotate(960deg) translate(-50%, -50%);
-      opacity: 0;
-    }
+  html {
+    font-size: 60%;
   }
 
-  html {
-    font-size: 55%;
+  header {
+    padding-bottom: 60px;
   }
 
   h1 {
@@ -1131,13 +1346,13 @@ div.socials {
 
   .menu {
     display: block;
-    width: 40px;
+    width: 30px;
     cursor: pointer;
   }
 
   .header-text {
     margin-top: 40px;
-    width: 90%;
+    width: 100%;
   }
 
   .desc {
@@ -1150,6 +1365,23 @@ div.socials {
 
   .text-block {
     width: 100%;
+  }
+
+  .value {
+    /* margin-top: 40px; */
+    height: 90rem;
+  }
+
+  .value-img {
+    width: 100%;
+  }
+
+  .config-img {
+    width: 70%;
+  }
+
+  .question {
+    font-size: 1.9rem;
   }
 
   aside {
