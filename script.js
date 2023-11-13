@@ -257,6 +257,9 @@ headerObserver.observe(headSection);
 // TRANSLATION
 let state = true;
 const translateBtn = document.querySelector(".translate");
+const translateMobile = document.querySelector(".translate-mob");
+const docDesk = document.querySelector(".doc-desk");
+const docMob = document.querySelector(".doc-mob");
 const started = document.querySelector(".started");
 const header = document.querySelector(".htext-cont");
 const fig1 = document.querySelector(".fig-1");
@@ -273,9 +276,8 @@ const faq4 = document.querySelector(".faq-4");
 const faq5 = document.querySelector(".faq-5");
 const faq6 = document.querySelector(".faq-6");
 const faq7 = document.querySelector(".faq-7");
-const footerText = document.querySelector(".foot-text");
 
-translateBtn.addEventListener("click", function () {
+const translate = function () {
   header.innerHTML =
     fig1.innerHTML =
     fig2.innerHTML =
@@ -284,19 +286,14 @@ translateBtn.addEventListener("click", function () {
     textBlock1.innerHTML =
     textBlock2.innerHTML =
     textBlock3.innerHTML =
-    faq1.innerHTML =
-    faq2.innerHTML =
-    faq3.innerHTML =
-    faq4.innerHTML =
     faq5.innerHTML =
-    faq6.innerHTML =
     faq7.innerHTML =
-    footerText.innerHTML =
       "";
 
   if (state) {
     // HEADER SECTION
-    translateBtn.textContent = "Tiếng Anh";
+    translateBtn.textContent = translateMobile.textContent = "Tiếng Anh";
+    docDesk.textContent = docMob.textContent = "Tài liệu";
     serviceDesk.textContent = serviceMob.textContent = "Dịch vụ";
     guidesDesk.textContent = guidesMob.textContent = "Hướng dẫn";
     started.textContent = "Bắt đầu";
@@ -304,13 +301,10 @@ translateBtn.addEventListener("click", function () {
     // ELEMENTS BLOCK
     header.innerHTML = `
     <h1 class="title">
-    Dữ liệu phân tích cơ bản, hành động giá và phân tích kỹ thuật
+    Phân tích, theo dõi và đầu tư crypto một cách dễ dàng và hiệu quả.
             </h1>
             <p class="desc">
-            Bằng cách tận dụng giao diện trực quan của Cài đặt và Ghi lại
-            trang, bạn có thể tối ưu hóa chiến lược giao dịch của mình, cập nhật thông tin
-            về xu hướng thị trường và đưa ra quyết định dựa trên dữ liệu cho
-            hành trình giao dịch thành công.
+            Theo dõi và nhận thông báo bất cứ khi nào phát hiện tín hiệu thị trường quan trọng bao gồm phân tích kỹ thuật, phân tích cơ bản và biến động giá bất thường.
             </p>`;
     document.querySelector(".learn").textContent = "Tìm hiểu thêm";
 
@@ -320,37 +314,22 @@ translateBtn.addEventListener("click", function () {
 
     fig1.innerHTML = `<h3>Phân tích cơ bản</h3>
     <p class="module-desc">
-    Sử dụng mô-đun Phân tích cơ bản toàn diện của chúng tôi để đạt được
-    hiểu biết sâu sắc về các số liệu thị trường quan trọng. Theo dõi vốn hóa thị trường,
-    khối lượng, tỷ lệ cấp vốn và tỷ lệ vị thế mua bán trong
-    thị trường tương lai một cách dễ dàng. Đưa ra quyết định đầu tư sáng suốt
-    dựa trên phân tích dữ liệu thời gian thực và luôn dẫn đầu thị trường
-    xu hướng.
+    Sử dụng các cột: Market cap - Vốn hóa thị trường, Volume 24H - khối lượng giao dịch trong ngày, Volume change 24H - khối lượng giao dịch thay đổi so với 24H trước, Funding rate, và tỷ lệ vị thế mua trên bán trong thị trường tương lai - Long Short ratio sẽ giúp bạn đưa ra quyết định đầu tư chính xác những crypto bạn đang hướng đến.
     </p>`;
 
-    fig2.innerHTML = `<h3>Thay đổi giá Theo dõi thời gian thực</h3>
+    fig2.innerHTML = `<h3>Biến động giá theo thời gian thực</h3>
     <p class="module-desc">
-    Đi trước sự biến động của thị trường với tính năng Thay đổi giá năng động của chúng tôi
-    Giám sát thời gian thực. Theo dõi biến động giá trên 11
-    các khung thời gian khác nhau, đảm bảo bạn không bao giờ bỏ lỡ thị trường bất ngờ
-    sự di chuyển. Biểu đồ tương tác của chúng tôi cung cấp cái nhìn toàn diện
-    xu hướng giá cả, cho phép bạn đưa ra quyết định kịp thời và
-    tối đa hóa tiềm năng đầu tư của bạn.
+    Theo dõi biến động giá trên 11 khung thời gian khác nhau, đảm bảo bạn không bao giờ bỏ lỡ các biến động bất ngờ của thị trường. Biểu đồ tương tác của chúng tôi cung cấp cái nhìn toàn diện xu hướng giá cả, cho phép bạn đưa ra quyết định kịp thời và tối đa hóa tiềm năng đầu tư của bạn.
     </p>`;
 
     fig3.innerHTML = `<h3>Phân tích kỹ thuật</h3>
     <p class="module-desc">
-    Tinh chỉnh chiến lược giao dịch của bạn với Kỹ thuật nâng cao của chúng tôi
-    Mô-đun phân tích. Đạt được những hiểu biết sâu sắc từ các biểu diễn số hóa
-    của các chỉ báo kỹ thuật chính, bao gồm RSI, dải Bollinger,
-    và mức thoái lui Fibonacci. Trực quan hóa xu hướng thị trường với
-    chính xác và đưa ra quyết định dựa trên dữ liệu để tối ưu hóa
-    hiệu suất giao dịch.
+    Ngay lập tức tìm kiếm và hiển thị danh sách Crypto thỏa mãn các điều kiện của các chỉ báo kỹ thuật đang được các trader sử dụng thông dụng nhất bao gồm RSI, Bollinger Band và Fibonacci retracement.
     </p>`;
 
     // GUIDES SECTION
     document.querySelector(".guides-desc").textContent = "Hướng dẫn sử dụng";
-    setText.innerHTML = `<h3 class="settings-heading">Tùy chỉnh trải nghiệm giao dịch của bạn</h3>
+    setText.innerHTML = `<h3 class="settings-heading">Cá nhân hóa trải nghiệm giao dịch của bạn</h3>
     <p class="heading-desc">
     Tại Tradie, chúng tôi ưu tiên các ưu tiên giao dịch của bạn. Với chúng tôi
     trang Cài đặt thân thiện với người dùng, bạn có thể cá nhân hóa tiền điện tử của mình
@@ -358,143 +337,38 @@ translateBtn.addEventListener("click", function () {
     </p>`;
 
     textBlock1.innerHTML = `
-    <h4>Bước 1: Định cấu hình sự hiện diện của bạn</h4>
+    <h4>Bước 1: Cài đặt các chỉ báo của bạn</h4>
           <p class="config-desc">
-          Dễ dàng truy cập trang Cài đặt và điều chỉnh các điều kiện mong muốn của bạn.
-          Chọn từ một loạt các chiến lược phân tích kỹ thuật và cơ bản
-          thông số phân tích để điều chỉnh phương pháp đầu tư của bạn.
+          Truy cập trang Setting  và điều chỉnh các chỉ báo mong muốn của bạn. Khi cài đặt tại trang Simple. Trang kết quả Record sẽ hiển thị tất cả các crypto thỏa mãn một hoặc nhiều các chỉ báo bạn đã cài đặt.
           </p>
-          <h5>Cấu hình nâng cao</h5>
+          <h5>Cài đặt nâng cao</h5>
           <p class="sub-desc">
-          Sử dụng cài đặt nâng cao của chúng tôi để có chiến lược giao dịch đa sắc thái hơn.
-          Tạo các nhóm logic và chỉ định nhiều điều kiện để tinh chỉnh
-          lọc dữ liệu và đạt được kết quả chính xác.
+          Sử dụng cài đặt nâng cao Advanced để có thể theo dõi nhiều chiến lược giao dịch cùng 1 lúc. Tạo các nhóm logic gồm nhiều tùy chỉnh để bao quát toàn bộ thị trường.
           </p>`;
 
     textBlock2.innerHTML = `
     <h4>Bước 2: Truy cập kết quả tùy chỉnh của bạn</h4>
           <p class="config-desc">
-          Kiểm tra trang Bản ghi để xem danh sách các loại tiền điện tử phù hợp
-          tiêu chí được chỉ định của bạn. Tradie tính toán và liệt kê nhiều nhất
-          nội dung có liên quan, cung cấp cho bạn thông tin chi tiết có giá trị cho
-          các quyết định giao dịch.
+          Tradie tính toán và liệt kê tất cả crypto phù hợp một hoặc nhiều tiêu chí của bạn, càng đạt được nhiều tiêu chí sẽ càng được đẩy lên đầu. Kiểm tra trang Record để xem danh sách các crypto đó.
           </p>`;
 
     textBlock3.innerHTML = `
     <h4>Bước 3: Thiết lập thông báo Telegram</h4>
           <p class="config-desc">
-          Trường hợp trang Record không hiển thị kết quả nào thì bạn có
-          tùy chọn để định cấu hình thông báo Telegram. Bằng cách này, bất cứ khi nào một
-          tiền điện tử đáp ứng tất cả các điều kiện được chỉ định, Tradie sẽ nhanh chóng
-          gửi cho bạn một cảnh báo.
+          Trường hợp chưa có crypto nào thỏa mãn các cài đặt của bạn và rang Record không hiển thị kết quả nào. Bạn có thể cài đặt chức năng gửi thông báo về Telegram. Bằng cách này, bất cứ khi nào có crypto đáp ứng tất cả các điều kiện được chỉ định trong trang Simple hoặc Advanced. Tradie sẽ nhanh chóng gửi cho bạn một thông báo.
           </p>`;
 
     document.querySelector(".block-4").textContent =
       "Mở khóa tiềm năng giao dịch của bạn";
     document.querySelector(
       ".text-4"
-    ).textContent = `Bằng cách tận dụng giao diện trực quan của Cài đặt và Ghi lại trang, bạn có thể tối ưu hóa chiến lược giao dịch của mình, cập nhật thông tin về xu hướng thị trường và đưa ra quyết định dựa trên dữ liệu để giao dịch thành công
-    hành trình.`;
+    ).textContent = `Tradie giúp bạn cá nhân hóa chiến thuật giao dịch của bản thân, cập nhật thông tin về xu hướng và giá toàn bộ thị trường, cung cấp cho bạn một góc nhìn toàn diện về biến động của thị trường.`;
 
     // FAQ SECTION
-    faq1.innerHTML = `
-    <h4 class="question">
-    Tradie là gì và nó mang lại lợi ích như thế nào cho các nhà đầu tư tiền điện tử
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-          Tradie là một ứng dụng giám sát tiền điện tử toàn diện cung cấp
-          Dữ liệu phân tích cơ bản, hành động giá và phân tích kỹ thuật. Nó
-          mang lại lợi ích cho các nhà đầu tư bằng cách cung cấp những hiểu biết kịp thời để đưa ra thông tin đầy đủ
-          các quyết định giao dịch.
-          </p>`;
-
-    faq2.innerHTML = `
-    <h4 class="question">
-    Tôi có thể sử dụng Tradie bằng các ngôn ngữ khác nhau không
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-          Tradie hỗ trợ nhiều ngôn ngữ, bao gồm tiếng Anh và
-          Tiếng Việt. Người dùng có thể chuyển đổi giữa các ngôn ngữ này dựa trên
-          sự ưa thích.
-          </p>`;
-
-    faq3.innerHTML = `
-    <h4 class="question">
-    Tradie cung cấp những gì
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-          Tradie cung cấp Phân tích cơ bản, Thay đổi giá theo thời gian thực
-          Giám sát và phân tích kỹ thuật.
-          </p>`;
-
-    faq4.innerHTML = `
-    <h4 class="question">
-    Tradie xử lý những biến động đột ngột của thị trường như thế nào
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-          Tradie xác định những biến động đột ngột và thông báo kịp thời cho người dùng,
-          cho phép họ cập nhật thông tin về những thay đổi của thị trường.
-          </p>`;
 
     faq5.innerHTML = `
     <h4 class="question">
-    Làm cách nào tôi có thể tùy chỉnh tùy chọn dữ liệu tiền điện tử của mình trên Tradie
+    Tôi nên tùy chỉnh cài đặt của mình như thế nào:
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -515,31 +389,6 @@ translateBtn.addEventListener("click", function () {
           Ví dụ: kết hợp Dải RSI và Dải Bollinger trong phần Kỹ thuật
           chiến lược phân tích bao gồm việc đi tới "Cài đặt" -> "Nâng cao" và
           thiết lập các điều kiện dựa trên sở thích của người dùng.
-          </p>`;
-
-    faq6.innerHTML = `
-    <h4 class="question">
-    Thông tin nào có sẵn trên trang Bản ghi
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-          Trang Record hiển thị kết quả cấu hình của người dùng
-          điều kiện. Nếu người dùng đặt điều kiện liên quan đến các chỉ báo như RSI
-          và Dải Bollinger, Tradie tính toán và liệt kê các đồng tiền rơi vào
-          khu vực cụ thể, cung cấp một cái nhìn tổng quan rõ ràng về điều kiện thị trường.
           </p>`;
 
     faq7.innerHTML = `
@@ -567,17 +416,6 @@ translateBtn.addEventListener("click", function () {
           </p>`;
 
     // FOOTER SECTION
-    footerText.innerHTML = `
-          <h2 class="footer-heading">TRADIE</h2>
-          <p class="footer-desc">
-          Tradie là một ứng dụng giám sát tiền điện tử tiên tiến được thiết kế để
-          trao quyền cho các nhà đầu tư tiền điện tử chuyên nghiệp với toàn diện
-          công cụ phân tích cơ bản và kỹ thuật. Nền tảng thân thiện với người dùng của chúng tôi
-          cung cấp thông tin chi tiết về thị trường theo thời gian thực, cài đặt có thể tùy chỉnh và kịp thời
-          thông báo, cho phép các nhà giao dịch thực hiện đầu tư sáng suốt
-          quyết định một cách tự tin. Luôn đón đầu những biến động của thị trường và
-          tối đa hóa tiềm năng giao dịch của bạn với Tradie.
-          </p>`;
 
     document.querySelector(".copyrights").textContent = "Đã đăng ký Bản quyền.";
     document.querySelector(".mob-action").textContent = "Bắt đầu";
@@ -587,20 +425,18 @@ translateBtn.addEventListener("click", function () {
     state = !state;
   } else {
     // HEADER SECTION
-    translateBtn.textContent = "Vietnamese";
+    translateBtn.textContent = translateMobile.textContent = "Vietnamese";
+    docDesk.textContent = docMob.textContent = "Document";
     serviceDesk.textContent = serviceMob.textContent = "Services";
     guidesDesk.textContent = guidesMob.textContent = "Guides";
     started.textContent = "Get Started";
 
     header.innerHTML = `
     <h1 class="title">
-              Fundamental analysis, Price action and Technical analysis data
+    Examine, monitor, and engage in cryptocurrency with simplicity and efficiency.
             </h1>
             <p class="desc">
-              By leveraging the intuitive interface of the Settings and Record
-              pages, you can optimize your trading strategies, stay informed
-              about market trends, and make data-driven decisions for a
-              successful trading journey.
+            Monitor the market and receive alerts for crucial signals, encompassing technical analysis, fundamental analysis, and unusual price movements.
             </p>`;
     document.querySelector(".learn").textContent = "Learn More";
 
@@ -610,32 +446,17 @@ translateBtn.addEventListener("click", function () {
 
     fig1.innerHTML = `<h3>Fundamental Analysis</h3>
       <p class="module-desc">
-        Utilize our comprehensive Fundamental Analysis module to gain
-        insights into key market metrics. Monitor the market cap,
-        volume, funding rate, and long-short positions ratio in the
-        future market effortlessly. Make informed investment decisions
-        based on real-time data analysis and stay ahead of market
-        trends.
+      Leverage the insights provided by the columns—Market Cap (Market Capitalization), 24H Volume (Trading Volume during the day), Volume Change 24H (Trading Volume change compared to the previous 24H), Funding Rate, and Long-Short Ratio in the Future Market. These metrics will guide you in making informed investment decisions for your targeted cryptocurrencies.
       </p>`;
 
     fig2.innerHTML = `<h3>Price change Real-time monitoring</h3>
     <p class="module-desc">
-      Stay ahead of market volatility with our dynamic Price Change
-      Real-Time Monitoring. Monitor price fluctuations across 11
-      different time frames, ensuring you never miss sudden market
-      movements. Our interactive charts provide a comprehensive view
-      of price trends, allowing you to make timely decisions and
-      maximize your investment potential.
+    Track price movements across 11 different time frames, ensuring you never miss unexpected market movements. Our interactive charts provide a comprehensive view of price trends, allowing you to make timely decisions and maximize your investment potential.
     </p>`;
 
     fig3.innerHTML = `<h3>Technical Analysis</h3>
     <p class="module-desc">
-      Refine your trading strategies with our advanced Technical
-      Analysis module. Gain insights from digitized representations
-      of key technical indicators, including RSI, Bollinger bands,
-      and Fibonacci Retracement. Visualize market trends with
-      precision and make data-driven decisions to optimize your
-      trading performance
+    Instantly search and display Crypto lists that meet the conditions of the most commonly used technical indicators by traders including RSI, Bollinger Band and Fibonacci retracement.
     </p>`;
 
     // GUIDES SECTION
@@ -648,17 +469,13 @@ translateBtn.addEventListener("click", function () {
     </p>`;
 
     textBlock1.innerHTML = `
-    <h4>Step 1: Configure your presence</h4>
+    <h4>Step 1: Set up your indicators</h4>
           <p class="config-desc">
-            Easily access the Settings page and adjust your desired conditions.
-            Choose from a range of technical analysis strategies and fundamental
-            analysis parameters to tailor your investment approach.
+          Access the Setting page and adjust your desired indicators. When set on the Simple page, the Record results page will display all cryptocurrencies that meet one or more of the indicators you have set.
           </p>
           <h5>Advanced Configuration</h5>
           <p class="sub-desc">
-            Utilize our advanced settings for a more nuanced trading strategy.
-            Create logical groups and specify multiple conditions to refine your
-            data filtering and achieve precise results.
+          Utilize our Advanced settings to monitor multiple trading strategies simultaneously. Create logical groups with multiple customizations to cover the entire market.
           </p>`;
 
     textBlock2.innerHTML = `
@@ -683,108 +500,12 @@ translateBtn.addEventListener("click", function () {
       "Unlock Your trading Potentials";
     document.querySelector(
       ".text-4"
-    ).textContent = `By leveraging the intuitive interface of the Settings and Record pages, you can optimize your trading strategies, stay informed about market trends, and make data-driven decisions for a successful trading
-    journey.`;
+    ).textContent = `Tradie helps you personalize your trading strategy, stay updated on market trends and prices across the entire market, providing you with a comprehensive view of market fluctuations.`;
 
     // FAQS SECTION
-    faq1.innerHTML = `
-    <h4 class="question">
-            What is Tradie, and how does it benefit cryptocurrency investors
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-            Tradie is a comprehensive crypto monitoring app that provides
-            Fundamental analysis, Price action, and Technical analysis data. It
-            benefits investors by offering timely insights for making informed
-            trading decisions.
-          </p>`;
-
-    faq2.innerHTML = `
-    <h4 class="question">
-            Can I use Tradie in different languages
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-            Tradie supports multiple languages, including English and
-            Vietnamese. Users can switch between these languages based on their
-            preference.
-          </p>`;
-
-    faq3.innerHTML = `
-    <h4 class="question">
-            What does Tradie offer
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-            Tradie offers Fundamental Analysis, Price Change Real-time
-            Monitoring and Technical Analysis.
-          </p>`;
-
-    faq4.innerHTML = `
-    <h4 class="question">
-            How does Tradie handle sudden market fluctuations
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-            Tradie identifies sudden fluctuations and promptly notifies users,
-            allowing them to stay informed about market changes.
-          </p>`;
-
     faq5.innerHTML = `
     <h4 class="question">
-            How can I customize my crypto data preferences on Tradie
+    How should I customize my settings?
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -805,31 +526,6 @@ translateBtn.addEventListener("click", function () {
             For example, combining RSI and Bollinger Bands in the Technical
             analysis strategy involves going to "Settings" -> "Advanced" and
             setting conditions based on user preferences.
-          </p>`;
-
-    faq6.innerHTML = `
-    <h4 class="question">
-            What information is available on the Record page
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-            The Record page displays the results of users' configured
-            conditions. If users set conditions related to indicators like RSI
-            and Bollinger Bands, Tradie calculates and lists coins falling into
-            specified zones, providing a clear overview of market conditions.
           </p>`;
 
     faq7.innerHTML = `
@@ -857,17 +553,6 @@ translateBtn.addEventListener("click", function () {
           </p>`;
 
     // FOOTER SECTION
-    footerText.innerHTML = `
-          <h2 class="footer-heading">TRADIE</h2>
-          <p class="footer-desc">
-            Tradie is a cutting-edge crypto monitoring application designed to
-            empower professional cryptocurrency investors with comprehensive
-            fundamental and technical analysis tools. Our user-friendly platform
-            offers real-time market insights, customizable settings, and timely
-            notifications, enabling traders to make informed investment
-            decisions with confidence. Stay ahead of market fluctuations and
-            maximize your trading potential with Tradie.
-          </p>`;
 
     document.querySelector(".copyrights").textContent = "All rights reserved.";
     document.querySelector(".mob-action").textContent = "Get Started";
@@ -876,4 +561,7 @@ translateBtn.addEventListener("click", function () {
     // Flip state
     state = !state;
   }
-});
+};
+
+translateBtn.addEventListener("click", translate);
+translateMobile.addEventListener("click", translate);

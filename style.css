@@ -21,20 +21,123 @@ body {
   position: relative;
 }
 
-.translate {
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+main {
+  position: relative;
+}
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+.background {
   position: fixed;
-  right: 0px;
-  bottom: 40px;
-  color: white;
-  font-size: 1.8rem;
-  cursor: pointer;
-  width: max-content;
-  background-color: #219ebc;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  z-index: 90;
-  padding: 10px 20px;
-  box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.205);
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #219ebc;
+  overflow: hidden;
+  z-index: -89;
+}
+.background li {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #1d8ea9;
+  color: transparent;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 7s ease-in forwards infinite;
+}
+undefined .background li:nth-child(0) {
+  animation-delay: 0s;
+  left: 93vw;
+  top: 56vh;
+}
+
+.background li:nth-child(1) {
+  animation-delay: 2s;
+  left: 62vw;
+  top: 71vh;
+}
+
+.background li:nth-child(2) {
+  animation-delay: 4s;
+  left: 9vw;
+  top: 23vh;
+}
+
+.background li:nth-child(3) {
+  animation-delay: 6s;
+  left: 59vw;
+  top: 68vh;
+}
+
+.background li:nth-child(4) {
+  animation-delay: 8s;
+  left: 86vw;
+  top: 93vh;
+  border-color: #24adce;
+}
+
+.background li:nth-child(5) {
+  animation-delay: 10s;
+  left: 32vw;
+  top: 35vh;
+}
+
+.background li:nth-child(6) {
+  animation-delay: 12s;
+  left: 41vw;
+  top: 9vh;
+  border-color: #24adce;
+}
+
+.background li:nth-child(7) {
+  animation-delay: 14s;
+  left: 74vw;
+  top: 88vh;
+}
+
+.background li:nth-child(8) {
+  animation-delay: 16s;
+  left: 18vw;
+  top: 45vh;
+  border-color: #24adce;
+}
+
+.background li:nth-child(9) {
+  animation-delay: 18s;
+  left: 29vw;
+  top: 15vh;
+  border-color: #24adce;
+}
+
+main {
+  position: relative;
 }
 
 header {
@@ -42,7 +145,7 @@ header {
   color: white;
   height: 100%;
   position: relative;
-  background-color: rgba(34, 38, 42, 0.457);
+  background-color: rgba(34, 38, 42, 0.667);
   /* background: #339af0; */
   padding: 20px 10px 80px 10px;
 }
@@ -70,17 +173,13 @@ header {
 .navigations.sticky {
   width: 100%;
   position: fixed;
-  background: linear-gradient(
-    to bottom,
-    rgba(32, 32, 32, 0.472) 1%,
-    rgba(32, 32, 32, 0)
-  );
+  background-color: #212529;
   top: 0px;
   left: 0px;
   z-index: 80;
   color: white;
-
   box-shadow: 0px 2px rgba(0, 0, 0, 0.01);
+  padding: 20px 20px 10px 20px;
 }
 
 .menu {
@@ -90,7 +189,7 @@ header {
 nav li {
   display: inline-block;
   list-style-type: none;
-  margin-right: 20px;
+  margin-right: 10px;
   cursor: pointer;
   transition: all ease-in-out 0.8s;
 }
@@ -193,10 +292,12 @@ h3 {
 }
 
 section {
-  background-color: white;
+  background-color: transparent;
   padding: 80px 40px;
   border-top: 1px solid #dee2e6;
   transition: all 1s ease-in;
+  position: relative;
+  color: white;
 }
 
 .section--hidden {
@@ -212,12 +313,14 @@ section {
 .values-desc {
   font-size: 2.5rem;
   /* color: #4dabf7; */
-  color: #219ebc;
+  /* color: #219ebc; */
+  color: white;
   text-align: center;
+  font-weight: 700;
 }
 
 .value {
-  margin-top: 80px;
+  margin-top: 20px;
   padding-bottom: 40px;
 
   overflow: hidden;
@@ -256,12 +359,6 @@ figure {
   left: 30px;
 }
 
-/* div#chart_div {
-  width: 90%;
-  height: 500px;
-  margin: auto;
-} */
-
 .btn p {
   width: max-content;
   margin: auto;
@@ -296,18 +393,18 @@ figure {
 }
 
 .dots__dot--active {
-  /* background-color: #fff; */
-  background-color: #888;
+  background-color: #fff;
+  /* background-color: #888; */
   opacity: 1;
 }
 
 .fig-back {
-  width: 80%;
+  width: 100%;
   margin: auto;
   background-color: #e9ecef;
   color: #212529;
   border-radius: 10px;
-  padding: 40px 30px;
+  padding: 30px 30px;
   box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.076);
 }
 
@@ -317,8 +414,8 @@ figure h3 {
 
 .module-desc {
   font-size: 1.8rem;
-  width: 80%;
-  margin: 20px auto;
+  width: 90%;
+  margin: 0px auto;
   line-height: 1.5;
 }
 
@@ -420,15 +517,31 @@ h5 {
 }
 
 .block {
+  width: 100%;
+  padding: 50px 30px;
+  text-align: center;
+  background-color: white;
+  border-top: 1px solid #212529;
+}
+
+.block-cont {
   width: 70%;
   margin: auto;
-  text-align: center;
 }
 
 .block-img {
   display: block;
   width: 50%;
   margin: auto;
+}
+
+.faqs {
+  background-color: white;
+  color: #212529;
+}
+
+.faq-desc {
+  color: #219ebc;
 }
 
 .faq {
@@ -454,6 +567,7 @@ h5 {
   justify-content: space-between;
   cursor: pointer;
   margin-bottom: 0px;
+  gap: 3px;
 }
 
 .arr-down {
@@ -499,24 +613,6 @@ footer {
   color: white;
 }
 
-aside {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-footer h2 {
-  color: white;
-}
-
-.footer-desc {
-  margin-top: 10px;
-  width: 60%;
-  line-height: 1.5;
-  font-size: 1.4rem;
-}
-
 .copyright {
   font-size: 1.4rem;
   text-align: center;
@@ -526,6 +622,7 @@ div.socials {
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .social-ink {
@@ -645,8 +742,13 @@ div.socials {
     font-size: 3.8rem;
   }
 
+  .values {
+    height: 120vh;
+    padding-top: 30px;
+  }
+
   .value {
-    height: 120rem;
+    height: 100vh;
   }
 
   .btn p {
@@ -654,11 +756,11 @@ div.socials {
   }
 
   .btn-right {
-    right: 50px;
+    right: 10px;
   }
 
   .btn-left {
-    left: 50px;
+    left: 10px;
   }
 
   .dots__dot {
@@ -676,12 +778,12 @@ div.socials {
   }
 
   .fig-back {
-    padding: 50px 30px;
+    padding: 30px;
   }
 
   .value-img {
     width: 100%;
-    height: 650px;
+    height: 450px;
   }
 
   .settings-heading {
