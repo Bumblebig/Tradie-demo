@@ -626,6 +626,34 @@ ul li.list {
   transform: rotateX(180deg);
 }
 
+.fa-slider {
+  position: relative;
+  width: 100%;
+}
+
+.faq-btn {
+  position: absolute;
+  border: none;
+  background: rgba(217, 215, 215, 0.32);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  padding: 10px 22px;
+  cursor: pointer;
+  top: 40%;
+  /* transform: translateY(-50%); */
+  width: max-content;
+  z-index: 100;
+}
+
+.faq-btn-left {
+  left: 0px;
+}
+
+.faq-btn-right {
+  right: 0px;
+}
+
 .faq-slider {
   position: relative;
   height: 48rem;
@@ -637,35 +665,11 @@ ul li.list {
 .faq-slide {
   position: absolute;
   top: 0;
-  width: 80%;
+  width: 100%;
   margin: auto;
   text-align: center;
   transition: transform 0.5s ease;
   z-index: 4;
-}
-
-.faq-btn {
-  position: absolute;
-  border: none;
-  /* background: rgba(217, 215, 215, 0.32); */
-  background-color: pink;
-  font-family: inherit;
-  color: #333;
-  border-radius: 50%;
-  padding: 10px 22px;
-  cursor: pointer;
-  top: 40%;
-  /* transform: translateY(-50%); */
-  width: max-content;
-  z-index: 30;
-}
-
-.faq-btn-left {
-  left: -30px;
-}
-
-.faq-btn-right {
-  right: -30px;
 }
 
 /* FOOTER SECTION */
