@@ -261,27 +261,53 @@ allSections.forEach(function (section) {
 //////////////////////////////////////////////////////////////////////////
 
 // FAQS
-const toggleFAQ = function () {
-  const faqHeading = document.querySelectorAll(".question");
-  faqHeading.forEach((el, i) => {
-    el.addEventListener("click", function (e) {
-      const id = e.target.closest(".faq-item");
-      const answer = id.querySelectorAll(".answer");
-      const img = id.querySelectorAll(".answer-img");
+let faqState1 = true;
+let faqState2 = true;
+const faq1 = document.querySelector(".h-5");
+const faq2 = document.querySelector(".h-7");
+faq1.addEventListener("click", function () {
+  const ans1 = document.querySelector(".faq-ans-1");
+  const arr1 = document.querySelector(".faq-6-arr");
+  if (faqState1) {
+    ans1.classList.remove("hidden");
+    arr1.classList.add("arr-up");
 
-      const arr = id.querySelector(".arr-down");
-      answer.forEach((el) => el.classList.toggle("visible"));
-      img.forEach((el) => el.classList.toggle("visible"));
-      arr.classList.toggle("arr-up");
+    setTimeout(() => {
+      ans1.classList.add("anim");
+    }, 50);
 
-      setTimeout(() => {
-        answer.forEach((el) => el.classList.toggle("anim"));
-      }, 30);
-    });
-  });
-};
+    faqState1 = !faqState1;
+  } else {
+    ans1.classList.remove("anim");
+    arr1.classList.remove("arr-up");
+    setTimeout(() => {
+      ans1.classList.add("hidden");
+    }, 50);
+    faqState1 = !faqState1;
+  }
+});
 
-toggleFAQ();
+faq2.addEventListener("click", function () {
+  const ans2 = document.querySelector(".faq-ans-2");
+  const arr2 = document.querySelector(".faq-7-arr");
+
+  if (faqState2) {
+    ans2.classList.remove("hidden");
+    arr2.classList.add("arr-up");
+
+    setTimeout(() => {
+      ans2.classList.add("anim");
+    }, 50);
+    faqState2 = !faqState2;
+  } else {
+    ans2.classList.remove("anim");
+    arr2.classList.remove("arr-up");
+    setTimeout(() => {
+      ans2.classList.add("hidden");
+    }, 50);
+    faqState2 = !faqState2;
+  }
+});
 
 //////////////////////////////////////////////////////////////////////////////////
 // STICKY NAV
@@ -422,7 +448,7 @@ const translate = function () {
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="arr-down"
+              class="arr-down faq-6-arr"
             >
               <path
                 stroke-linecap="round"
@@ -459,15 +485,17 @@ const translate = function () {
     document.querySelector(
       ".q-7-2"
     ).textContent = `Bằng các cài đặt hợp lý, trader có thể theo dõi các tín hiệu bên trên mọi lúc mọi nơi đón đầu các xu hướng 1 cách nhanh chóng nhất.`;
+    // toggleFAQ();
 
     // FOOTER SECTION
 
     document.querySelector(".copyrights").textContent = "Đã đăng ký Bản quyền.";
     document.querySelector(".mob-action").textContent = "Bắt đầu";
 
-    toggleFAQ();
+    // toggleFAQ();
     // Flip state
     state = !state;
+    // toggleFAQ();
   } else {
     // HEADER SECTION
     translateBtn.textContent = translateMobile.textContent = "Vietnamese";
@@ -560,7 +588,7 @@ const translate = function () {
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
-      class="arr-down"
+      class="arr-down faq-6-arr"
     >
       <path
         stroke-linecap="round"
@@ -617,9 +645,10 @@ const translate = function () {
     document.querySelector(".copyrights").textContent = "All rights reserved.";
     document.querySelector(".mob-action").textContent = "Get Started";
 
-    toggleFAQ();
+    // toggleFAQ();
     // Flip state
     state = !state;
+    // toggleFAQ();
   }
 };
 
