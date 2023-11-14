@@ -1,3 +1,5 @@
+/* GENERAL DESIGN */
+
 * {
   padding: 0;
   margin: 0;
@@ -146,13 +148,14 @@ main {
   position: relative;
 }
 
+/* HEADER SECTION */
+
 header {
   width: 100%;
   color: white;
   height: 100%;
   position: relative;
   background-color: rgba(34, 38, 42, 0.667);
-  /* background: #339af0; */
   padding: 20px 10px 80px 10px;
 }
 
@@ -284,7 +287,6 @@ h3 {
 }
 
 .learn {
-  /* margin-bottom: 50px; */
   animation: learn 0.7s ease-in;
 }
 
@@ -318,8 +320,6 @@ section {
 
 .values-desc {
   font-size: 2.5rem;
-  /* color: #4dabf7; */
-  /* color: #219ebc; */
   color: white;
   text-align: center;
   font-weight: 700;
@@ -400,7 +400,6 @@ figure {
 
 .dots__dot--active {
   background-color: #fff;
-  /* background-color: #888; */
   opacity: 1;
 }
 
@@ -454,18 +453,7 @@ figure h3 {
   margin: 10px auto 0px auto;
 }
 
-/* #app {
-  max-width: 100%;
-} */
-
-/* .trading-vue {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 .configs {
-  /* padding: 30px; */
   padding-top: 0px;
   padding-right: 20px;
   padding-left: 20px;
@@ -485,22 +473,6 @@ figure h3 {
 .second {
   padding-left: 20px;
 }
-
-/* .icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #74c1fc26;
-  margin-bottom: 10px;
-}
-
-.svgs {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  left: 25%;
-  top: 20%;
-} */
 
 h4 {
   font-size: 2.5rem;
@@ -641,7 +613,6 @@ ul li.list {
   padding: 10px 22px;
   cursor: pointer;
   top: 40%;
-  /* transform: translateY(-50%); */
   width: max-content;
   z-index: 100;
 }
@@ -678,7 +649,6 @@ footer {
   width: 100%;
   padding: 40px;
   padding-bottom: 10px;
-  /* background-color: #339af0; */
   background-color: #219ebc;
   color: white;
 }
@@ -726,7 +696,6 @@ div.socials {
   z-index: 200;
   transition: inherit;
   opacity: 0;
-  /* padding: 30px 0px; */
 }
 
 .menus {
@@ -975,7 +944,6 @@ div.socials {
 
   .module-desc {
     font-size: 3rem;
-    /* margin: 40px auto; */
   }
 
   .value {
@@ -1123,7 +1091,6 @@ div.socials {
 
   .value-img {
     width: 30%;
-    /* height: 500px; */
   }
 
   .growth {
@@ -1408,7 +1375,6 @@ div.socials {
 
   .header-text {
     width: 90%;
-    /* margin: 0px; */
   }
 
   .htext-cont {
@@ -1600,7 +1566,6 @@ div.socials {
   }
 
   .value {
-    /* margin-top: 40px; */
     height: 70rem;
   }
 
