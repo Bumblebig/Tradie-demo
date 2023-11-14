@@ -1578,11 +1578,15 @@ div.socials {
 
   .value {
     /* margin-top: 40px; */
-    height: 90rem;
+    height: 70rem;
   }
 
   .value-img {
-    width: 100%;
+    width: 60%;
+  }
+
+  .settings {
+    margin-top: 0px;
   }
 
   .config-img {
