@@ -1340,6 +1340,14 @@ div.socials {
     font-size: 2rem;
   }
 
+  .faq-btn-left {
+    left: -30px;
+  }
+
+  .faq-btn-right {
+    right: -30px;
+  }
+
   footer {
     padding-left: 30px;
     padding-right: 30px;
@@ -1612,13 +1620,17 @@ div.socials {
     font-size: 1.9rem;
   }
 
-  aside {
-    flex-direction: column;
+  .faq-slider {
+    height: 20rem;
+    width: 100%;
   }
 
-  .footer-desc {
-    width: 100%;
-    margin-bottom: 30px;
+  .faq-btn-left {
+    left: -40px;
+  }
+
+  .faq-btn-right {
+    right: -40px;
   }
 
   div.socials {
