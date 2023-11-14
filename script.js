@@ -412,9 +412,24 @@ const translate = function () {
     // FAQ SECTION
 
     // FAQ 5
+    document.querySelector(".h-5").innerHTML = "";
     document.querySelector(
       ".h-5"
-    ).textContent = `Tôi nên tùy chỉnh cài đặt của mình như thế nào:
+    ).innerHTML = `Tôi nên tùy chỉnh cài đặt của mình như thế nào:
+    <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="arr-down"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
           `;
 
     document.querySelector(
@@ -535,10 +550,25 @@ const translate = function () {
     // FAQS SECTION
 
     // FAQ 5
+    document.querySelector(".h-5").innerHTML = "";
     document.querySelector(
       ".h-5"
-    ).textContent = `How should I customize my settings
-    `;
+    ).innerHTML = `How should I customize my settings
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="arr-down"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+      />
+    </svg>
+          `;
 
     document.querySelector(
       ".f5-1"

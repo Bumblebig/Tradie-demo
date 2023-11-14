@@ -1442,6 +1442,10 @@ div.socials {
     right: 5px;
   }
 
+  .settings {
+    margin-top: 45px;
+  }
+
   .set-text {
     width: 100%;
     text-align: center;
@@ -1483,8 +1487,8 @@ div.socials {
   }
 
   .block {
-    width: 90%;
-    margin-top: 50px;
+    width: 100%;
+    margin-top: 0px;
   }
 
   .faq,
