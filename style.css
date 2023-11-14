@@ -1399,12 +1399,16 @@ div.socials {
     padding: 40px 30px;
   }
 
+  .values {
+    height: auto;
+  }
+
   .values-desc {
     font-size: 2.2rem;
   }
 
   .value {
-    margin-top: 40px;
+    margin-top: 0px;
     height: 75rem;
   }
 
