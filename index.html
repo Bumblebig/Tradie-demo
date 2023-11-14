@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -22,7 +22,7 @@
     <header>
       <div class="header-cont">
         <div class="navigations">
-          <h1>TRADIE</h1>
+          <h1 class="logo">TRADIE</h1>
           <nav>
             <li class="docum-desk">
               <a href="#" class="links btn-links doc-desk">Document</a>
@@ -31,7 +31,7 @@
             <li class="service-desk">Services</li>
             <li class="guides-desk">Guides</li>
             <li class="faq-desk">FAQ</li>
-            <li class="button">
+            <li class="button start-btn">
               <a href="https://tradie.vn/" class="links btn-links started"
                 >Get Started</a
               >
@@ -110,7 +110,7 @@
                   </p>
                 </div>
 
-                <!-- <div class="value-img cont-1"></div> -->
+                <div class="value-img cont-1 growth"></div>
               </div>
             </figure>
 
@@ -127,7 +127,7 @@
                   </p>
                 </div>
 
-                <!-- <div class="value-img cont-2"></div> -->
+                <div class="value-img cont-2"></div>
               </div>
             </figure>
 
@@ -142,7 +142,7 @@
                     retracement.
                   </p>
                 </div>
-                <!-- <div class="value-img cont-3"></div> -->
+                <div class="value-img cont-3"></div>
               </div>
             </figure>
           </div>
@@ -212,9 +212,9 @@
     <section class="faqs section--hidden section">
       <p class="values-desc faq-desc">FAQs</p>
       <div class="faq">
-        <article class="faq-item faq-5">
+        <article class="faq-item faq-5 first-faq">
           <h4 class="question">
-            How should I customize my settings
+            <span class="h-5">How should I customize my settings</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -230,17 +230,29 @@
               />
             </svg>
           </h4>
-          <p class="answer">
-            Users can configure their desired conditions on the Settings page.
-            For example, combining RSI and Bollinger Bands in the Technical
-            analysis strategy involves going to "Settings" -> "Advanced" and
-            setting conditions based on user preferences.
+          <p class="answer f5-1">
+            If you trade using technical analysis, you can combine RSI and
+            Bollinger Band in the Settings -> Advanced section as follows:
           </p>
+          <img
+            src="assets/advanced.png"
+            alt="advanced"
+            class="answer-img anim"
+          />
+          <p class="answer f5-2">
+            Go back to the "Record" page, and Tradie will calculate and list all
+            cryptocurrencies in the "Overbought" and "Oversold" zones as you
+            have set.
+          </p>
+          <img src="assets/pages.png" alt="pages" class="answer-img anim" />
         </article>
 
         <article class="faq-item faq-7">
           <h4 class="question">
-            How does Tradie help users find the best entry points in the market
+            <span class="h-7"
+              >How does Tradie help users find the best entry points in the
+              market</span
+            >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -256,11 +268,51 @@
               />
             </svg>
           </h4>
-          <p class="answer">
-            Tradie's comprehensive solutions and real-time monitoring modules
-            enable users to identify optimal entry points at the earliest
-            possible time, aiding in strategic decision-making.
+          <p class="answer q-7-1">
+            Regardless of whether the market is sideways, down, or in an
+            uptrend, there is often a repeating pattern where certain coins are
+            chosen for pump and dump schemes every few weeks/months. By the time
+            we become aware of it, it's usually at its peak. All pump and dump
+            cases tend to follow these common patterns:
           </p>
+
+          <ul class="faq-list">
+            <li class="answer list l-1">
+              - Prior to the pump, there is a long period of sideways or
+              downtrend with minimal price and volume fluctuations.
+            </li>
+            <li class="answer list l-2">
+              - When the pump starts, the volume/price suddenly surges within a
+              short period (accompanied by potentially positive news).
+            </li>
+            <li class="answer list l-3">
+              - The price movement becomes independent of BTC.
+            </li>
+          </ul>
+
+          <p class="answer q-7-2">
+            With appropriate settings, traders can monitor these signals
+            anytime, anywhere, staying ahead of trends as quickly as possible.
+          </p>
+          <div class="faq-slider answer">
+            <div class="faq-btn faq-btn-left answer"><</div>
+            <div class="faq-btn faq-btn-right answer">></div>
+            <img
+              src="assets/slide1.png"
+              alt="slide"
+              class="answer-img anim faq-slide"
+            />
+            <img
+              src="assets/slide2.png"
+              alt="slide"
+              class="answer-img anim faq-slide"
+            />
+            <img
+              src="assets/slide3.png"
+              alt="slide"
+              class="answer-img anim faq-slide"
+            />
+          </div>
         </article>
       </div>
     </section>
@@ -369,9 +421,9 @@
         });
       }
 
-      loadLottieAnimation("assets/fin-illu.json", ".cont-1");
-      loadLottieAnimation("assets/price-change.json", ".cont-2");
-      loadLottieAnimation("assets/tech-analysis.json", ".cont-3");
+      loadLottieAnimation("assets/growth-1.json", ".cont-1");
+      loadLottieAnimation("assets/investment.json", ".cont-3");
+      loadLottieAnimation("assets/technical.json", ".cont-2");
       loadLottieAnimation("assets/configure.json", ".config-1");
       loadLottieAnimation("assets/advanced.json", ".config-2");
       loadLottieAnimation("assets/customised.json", ".config-3");

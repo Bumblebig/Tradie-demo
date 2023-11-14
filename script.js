@@ -3,6 +3,7 @@
 // SLIDER
 const slider = function () {
   const slides = document.querySelectorAll(".fig");
+  const subSlide = document.querySelectorAll(".fig-back");
   const btnLeft = document.querySelector(".btn-left");
   const btnRight = document.querySelector(".btn-right");
   const dotContainer = document.querySelector(".dots");
@@ -12,7 +13,7 @@ const slider = function () {
 
   // Functions
   const createDots = function () {
-    slides.forEach(function (_, i) {
+    subSlide.forEach(function (_, i) {
       dotContainer.insertAdjacentHTML(
         "beforeend",
         `<button class="dots__dot" data-slide="${i}"></button>`
@@ -104,6 +105,56 @@ const slider = function () {
   startSlider();
 };
 slider();
+
+const faqSlider = function () {
+  const faqSlides = document.querySelectorAll(".faq-slide");
+  const btnLeft = document.querySelector(".faq-btn-left");
+  const btnRight = document.querySelector(".faq-btn-right");
+
+  let curSlide = 0;
+  const maxSlide = faqSlides.length;
+
+  const goToSlide = function (slide) {
+    faqSlides.forEach(
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  // Next slide
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    goToSlide(curSlide);
+  };
+
+  const prevSlide = function () {
+    if (curSlide === 0) {
+      curSlide = maxSlide - 1;
+    } else {
+      curSlide--;
+    }
+    goToSlide(curSlide);
+  };
+
+  const init = function () {
+    goToSlide(0);
+  };
+  init();
+
+  btnRight.addEventListener("click", function () {
+    nextSlide();
+  });
+
+  btnLeft.addEventListener("click", function () {
+    prevSlide();
+  });
+};
+
+faqSlider();
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -215,13 +266,16 @@ const toggleFAQ = function () {
   faqHeading.forEach((el, i) => {
     el.addEventListener("click", function (e) {
       const id = e.target.closest(".faq-item");
-      const answer = id.querySelector(".answer");
+      const answer = id.querySelectorAll(".answer");
+      const img = id.querySelectorAll(".answer-img");
+
       const arr = id.querySelector(".arr-down");
-      answer.classList.toggle("visible");
+      answer.forEach((el) => el.classList.toggle("visible"));
+      img.forEach((el) => el.classList.toggle("visible"));
       arr.classList.toggle("arr-up");
 
       setTimeout(() => {
-        answer.classList.toggle("anim");
+        answer.forEach((el) => el.classList.toggle("anim"));
       }, 30);
     });
   });
@@ -269,13 +323,6 @@ const setText = document.querySelector(".set-text");
 const textBlock1 = document.querySelector(".txtb-1");
 const textBlock2 = document.querySelector(".txtb-2");
 const textBlock3 = document.querySelector(".txtb-3");
-const faq1 = document.querySelector(".faq-1");
-const faq2 = document.querySelector(".faq-2");
-const faq3 = document.querySelector(".faq-3");
-const faq4 = document.querySelector(".faq-4");
-const faq5 = document.querySelector(".faq-5");
-const faq6 = document.querySelector(".faq-6");
-const faq7 = document.querySelector(".faq-7");
 
 const translate = function () {
   header.innerHTML =
@@ -286,8 +333,6 @@ const translate = function () {
     textBlock1.innerHTML =
     textBlock2.innerHTML =
     textBlock3.innerHTML =
-    faq5.innerHTML =
-    faq7.innerHTML =
       "";
 
   if (state) {
@@ -366,54 +411,39 @@ const translate = function () {
 
     // FAQ SECTION
 
-    faq5.innerHTML = `
-    <h4 class="question">
-    Tôi nên tùy chỉnh cài đặt của mình như thế nào:
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-          Người dùng có thể định cấu hình các điều kiện mong muốn của mình trên trang Cài đặt.
-          Ví dụ: kết hợp Dải RSI và Dải Bollinger trong phần Kỹ thuật
-          chiến lược phân tích bao gồm việc đi tới "Cài đặt" -> "Nâng cao" và
-          thiết lập các điều kiện dựa trên sở thích của người dùng.
-          </p>`;
+    // FAQ 5
+    document.querySelector(
+      ".h-5"
+    ).textContent = `Tôi nên tùy chỉnh cài đặt của mình như thế nào:
+          `;
 
-    faq7.innerHTML = `
-    <h4 class="question">
-    Tradie giúp người dùng tìm được điểm vào tốt nhất trên thị trường như thế nào
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-          Các giải pháp toàn diện và mô-đun giám sát thời gian thực của Tradie
-          cho phép người dùng xác định điểm vào tối ưu sớm nhất
-          thời gian có thể, hỗ trợ việc ra quyết định chiến lược.
-          </p>`;
+    document.querySelector(
+      ".f5-1"
+    ).textContent = `Nếu bạn giao dịch theo phương pháp phân tích kỹ thuật, bạn có thể kết hợp RSI và Bollinger Band trong phần Settings -> Advanced như sau:`;
+
+    document.querySelector(
+      ".f5-2"
+    ).textContent = `Quay lại trang “Record”, Tradie sẽ tính toán và liệt kê tất cả các crypto nằm trong vùng “Quá mua” và “Quá bán” giống như bạn đã đặt.`;
+
+    // FAQ 7
+    document.querySelector(".l-1").textContent =
+      "- Trước đó sideway hoặc downtrend dài, giá và volume biến động rất ít.";
+    document.querySelector(".l-2").textContent =
+      "- Khi bắt đầu được pump, Volume/Giá bỗng nhiên tăng đột biến trong khoảng thời gian ngắn ( cùng với đó tin tức tốt có thể được tung ra ).";
+    document.querySelector(".l-3").textContent =
+      "- Đường giá đi độc lập với BTC.";
+
+    document.querySelector(
+      ".h-7"
+    ).textContent = `Tradie giúp người dùng tìm được điểm vào tốt nhất trên thị trường như thế nào`;
+
+    document.querySelector(
+      ".q-7-1"
+    ).textContent = `Bất kể thị trường đang sideway, down hay uptrend thì vẫn luôn lặp lại trong vài tuần/tháng một số đồng coin sẽ được chọn để thực hiện cuộc chơi pump and dump và khi mà chúng ta biết đến sự tồn tại của nó thì thường lúc đó đã là đỉnh rồi. Tất cả các trường hợp pump and dump như thế đều tuân theo chung các quy luật như sau:`;
+
+    document.querySelector(
+      ".q-7-2"
+    ).textContent = `Bằng các cài đặt hợp lý, trader có thể theo dõi các tín hiệu bên trên mọi lúc mọi nơi đón đầu các xu hướng 1 cách nhanh chóng nhất.`;
 
     // FOOTER SECTION
 
@@ -503,54 +533,54 @@ const translate = function () {
     ).textContent = `Tradie helps you personalize your trading strategy, stay updated on market trends and prices across the entire market, providing you with a comprehensive view of market fluctuations.`;
 
     // FAQS SECTION
-    faq5.innerHTML = `
-    <h4 class="question">
-    How should I customize my settings?
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-            Users can configure their desired conditions on the Settings page.
-            For example, combining RSI and Bollinger Bands in the Technical
-            analysis strategy involves going to "Settings" -> "Advanced" and
-            setting conditions based on user preferences.
-          </p>`;
 
-    faq7.innerHTML = `
-    <h4 class="question">
-            How does Tradie help users find the best entry points in the market
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="arr-down"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </h4>
-          <p class="answer">
-            Tradie's comprehensive solutions and real-time monitoring modules
-            enable users to identify optimal entry points at the earliest
-            possible time, aiding in strategic decision-making.
-          </p>`;
+    // FAQ 5
+    document.querySelector(
+      ".h-5"
+    ).textContent = `How should I customize my settings
+    `;
+
+    document.querySelector(
+      ".f5-1"
+    ).textContent = `If you trade using technical analysis, you can combine RSI and
+    Bollinger Band in the Settings -> Advanced section as follows:`;
+
+    document.querySelector(
+      ".f5-2"
+    ).textContent = `Go back to the "Record" page, and Tradie will calculate and list all
+    cryptocurrencies in the "Overbought" and "Oversold" zones as you
+    have set.`;
+
+    // FAQ 7
+    document.querySelector(
+      ".l-1"
+    ).textContent = `- Prior to the pump, there is a long period of sideways or
+      downtrend with minimal price and volume fluctuations.`;
+    document.querySelector(
+      ".l-2"
+    ).textContent = `- When the pump starts, the volume/price suddenly surges within a
+    short period (accompanied by potentially positive news).`;
+    document.querySelector(
+      ".l-3"
+    ).textContent = `- The price movement becomes independent of BTC.`;
+
+    document.querySelector(
+      ".h-7"
+    ).textContent = `How does Tradie help users find the best entry points in the
+    market`;
+
+    document.querySelector(
+      ".q-7-1"
+    ).textContent = `Regardless of whether the market is sideways, down, or in an
+    uptrend, there is often a repeating pattern where certain coins are
+    chosen for pump and dump schemes every few weeks/months. By the time
+    we become aware of it, it's usually at its peak. All pump and dump
+    cases tend to follow these common patterns:`;
+
+    document.querySelector(
+      ".q-7-2"
+    ).textContent = `With appropriate settings, traders can monitor these signals
+    anytime, anywhere, staying ahead of trends as quickly as possible.`;
 
     // FOOTER SECTION
 
@@ -565,3 +595,4 @@ const translate = function () {
 
 translateBtn.addEventListener("click", translate);
 translateMobile.addEventListener("click", translate);
+translate();
