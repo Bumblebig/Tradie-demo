@@ -436,7 +436,7 @@ const translate = function () {
     document.querySelector(".h-5").innerHTML = "";
     document.querySelector(
       ".h-5"
-    ).innerHTML = `Tôi nên tùy chỉnh cài đặt của mình như thế nào:
+    ).innerHTML = `Tôi nên tùy chỉnh cài đặt của mình như thế nào?
     <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -474,7 +474,7 @@ const translate = function () {
 
     document.querySelector(
       ".h-7"
-    ).textContent = `Tradie giúp người dùng tìm được điểm vào tốt nhất trên thị trường như thế nào`;
+    ).textContent = `Tradie giúp người dùng tìm được điểm vào tốt nhất trên thị trường như thế nào?`;
 
     document.querySelector(
       ".q-7-1"
@@ -592,7 +592,7 @@ const translate = function () {
     document.querySelector(".h-5").innerHTML = "";
     document.querySelector(
       ".h-5"
-    ).innerHTML = `How should I customize my settings
+    ).innerHTML = `How should I customize my settings?
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -641,7 +641,7 @@ const translate = function () {
     document.querySelector(
       ".h-7"
     ).textContent = `How does Tradie help users find the best entry points in the
-    market`;
+    market?`;
 
     document.querySelector(
       ".q-7-1"
