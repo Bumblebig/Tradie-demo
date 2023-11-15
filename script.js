@@ -264,7 +264,7 @@ allSections.forEach(function (section) {
 let faqState1 = true;
 let faqState2 = true;
 const faq1 = document.querySelector(".h-5");
-const faq2 = document.querySelector(".h-7");
+const faq2 = document.querySelector(".fh-7");
 faq1.addEventListener("click", function () {
   const ans1 = document.querySelector(".faq-ans-1");
   const arr1 = document.querySelector(".faq-6-arr");
@@ -363,7 +363,7 @@ const translate = function () {
 
   if (state) {
     // HEADER SECTION
-    translateBtn.textContent = translateMobile.textContent = "Tiếng Anh";
+    translateBtn.textContent = translateMobile.textContent = "English";
     docDesk.textContent = docMob.textContent = "Tài liệu";
     serviceDesk.textContent = serviceMob.textContent = "Dịch vụ";
     guidesDesk.textContent = guidesMob.textContent = "Hướng dẫn";
@@ -385,7 +385,7 @@ const translate = function () {
 
     fig1.innerHTML = `<h3>Phân tích cơ bản</h3>
     <p class="module-desc">
-    Sử dụng các cột: Market cap - Vốn hóa thị trường, Volume 24H - khối lượng giao dịch trong ngày, Volume change 24H - khối lượng giao dịch thay đổi so với 24H trước, Funding rate, và tỷ lệ vị thế mua trên bán trong thị trường tương lai - Long Short ratio sẽ giúp bạn đưa ra quyết định đầu tư chính xác những crypto bạn đang hướng đến.
+    Sử dụng các cột: <strong>Market cap</strong> - Vốn hóa thị trường, <strong>Volume 24H</strong> - khối lượng giao dịch trong ngày, <strong>Volume change 24H</strong> - khối lượng giao dịch thay đổi so với 24H trước, <strong>Funding rate</strong>, và tỷ lệ vị thế mua trên bán trong thị trường tương lai - <strong>Long Short ratio</strong> sẽ giúp bạn đưa ra quyết định đầu tư chính xác những crypto bạn đang hướng đến.
     </p>`;
 
     fig2.innerHTML = `<h3>Biến động giá theo thời gian thực</h3>
@@ -395,38 +395,33 @@ const translate = function () {
 
     fig3.innerHTML = `<h3>Phân tích kỹ thuật</h3>
     <p class="module-desc">
-    Ngay lập tức tìm kiếm và hiển thị danh sách Crypto thỏa mãn các điều kiện của các chỉ báo kỹ thuật đang được các trader sử dụng thông dụng nhất bao gồm RSI, Bollinger Band và Fibonacci retracement.
+    Ngay lập tức tìm kiếm và hiển thị danh sách Crypto thỏa mãn các điều kiện của các chỉ báo kỹ thuật đang được các trader sử dụng thông dụng nhất bao gồm <strong>RSI</strong> , <strong>Bollinger Band</strong>  và <strong>Fibonacci retracement</strong> .
     </p>`;
 
     // GUIDES SECTION
     document.querySelector(".guides-desc").textContent = "Hướng dẫn sử dụng";
-    setText.innerHTML = `<h3 class="settings-heading">Cá nhân hóa trải nghiệm giao dịch của bạn</h3>
-    <p class="heading-desc">
-    Tại Tradie, chúng tôi ưu tiên các ưu tiên giao dịch của bạn. Với chúng tôi
-    trang Cài đặt thân thiện với người dùng, bạn có thể cá nhân hóa tiền điện tử của mình
-    kinh nghiệm giám sát.
-    </p>`;
+    setText.innerHTML = `<h3 class="settings-heading">Cá nhân hóa trải nghiệm giao dịch của bạn</h3>`;
 
     textBlock1.innerHTML = `
     <h4>Bước 1: Cài đặt các chỉ báo của bạn</h4>
           <p class="config-desc">
-          Truy cập trang Setting  và điều chỉnh các chỉ báo mong muốn của bạn. Khi cài đặt tại trang Simple. Trang kết quả Record sẽ hiển thị tất cả các crypto thỏa mãn một hoặc nhiều các chỉ báo bạn đã cài đặt.
+          Truy cập trang <strong>Setting</strong>  và điều chỉnh các chỉ báo mong muốn của bạn. Khi cài đặt tại trang <strong>Simple</strong>. Trang kết quả Record sẽ hiển thị tất cả các crypto thỏa mãn một hoặc nhiều các chỉ báo bạn đã cài đặt.
           </p>
           <h5>Cài đặt nâng cao</h5>
           <p class="sub-desc">
-          Sử dụng cài đặt nâng cao Advanced để có thể theo dõi nhiều chiến lược giao dịch cùng 1 lúc. Tạo các nhóm logic gồm nhiều tùy chỉnh để bao quát toàn bộ thị trường.
+          Sử dụng cài đặt nâng cao <strong>Advanced</strong> để có thể theo dõi nhiều chiến lược giao dịch cùng 1 lúc. Tạo các nhóm logic gồm nhiều tùy chỉnh để bao quát toàn bộ thị trường.
           </p>`;
 
     textBlock2.innerHTML = `
     <h4>Bước 2: Truy cập kết quả tùy chỉnh của bạn</h4>
           <p class="config-desc">
-          Tradie tính toán và liệt kê tất cả crypto phù hợp một hoặc nhiều tiêu chí của bạn, càng đạt được nhiều tiêu chí sẽ càng được đẩy lên đầu. Kiểm tra trang Record để xem danh sách các crypto đó.
+          Tradie tính toán và liệt kê tất cả crypto phù hợp một hoặc nhiều tiêu chí của bạn, càng đạt được nhiều tiêu chí sẽ càng được đẩy lên đầu. Kiểm tra trang <strong>Record</strong> để xem danh sách các crypto đó.
           </p>`;
 
     textBlock3.innerHTML = `
     <h4>Bước 3: Thiết lập thông báo Telegram</h4>
           <p class="config-desc">
-          Trường hợp chưa có crypto nào thỏa mãn các cài đặt của bạn và rang Record không hiển thị kết quả nào. Bạn có thể cài đặt chức năng gửi thông báo về Telegram. Bằng cách này, bất cứ khi nào có crypto đáp ứng tất cả các điều kiện được chỉ định trong trang Simple hoặc Advanced. Tradie sẽ nhanh chóng gửi cho bạn một thông báo.
+          Trường hợp chưa có crypto nào thỏa mãn các cài đặt của bạn và trang <strong>Record</strong> không hiển thị kết quả nào. Bạn có thể cài đặt chức năng gửi thông báo về Telegram. Bằng cách này, bất cứ khi nào có crypto đáp ứng tất cả các điều kiện được chỉ định trong trang <strong>Simple</strong> hoặc <strong>Advanced</strong>. Tradie sẽ nhanh chóng gửi cho bạn một thông báo.
           </p>`;
 
     document.querySelector(".block-4").textContent =
@@ -458,13 +453,16 @@ const translate = function () {
             </svg>
           `;
 
-    document.querySelector(
-      ".f5-1"
-    ).textContent = `Nếu bạn giao dịch theo phương pháp phân tích kỹ thuật, bạn có thể kết hợp RSI và Bollinger Band trong phần Settings -> Advanced như sau:`;
+    document.querySelector(".f5-1").innerHTML = "";
 
     document.querySelector(
+      ".f5-1"
+    ).innerHTML = `Ví dụ nếu bạn giao dịch theo phương pháp phân tích kỹ thuật, bạn có thể kết hợp <strong>RSI</strong> và <strong>Bollinger Band</strong> trong phần <strong>Settings</strong> -> <strong>Advanced</strong> như sau:`;
+
+    document.querySelector(".f5-2").innerHTML = "";
+    document.querySelector(
       ".f5-2"
-    ).textContent = `Quay lại trang “Record”, Tradie sẽ tính toán và liệt kê tất cả các crypto nằm trong vùng “Quá mua” và “Quá bán” giống như bạn đã đặt.`;
+    ).innerHTML = `Quay lại trang <strong>“Record”</strong>, Tradie sẽ tính toán và liệt kê tất cả các crypto nằm trong vùng “Quá mua” và “Quá bán” giống như bạn đã đặt.`;
 
     // FAQ 7
     document.querySelector(".l-1").textContent =
@@ -498,7 +496,7 @@ const translate = function () {
     // toggleFAQ();
   } else {
     // HEADER SECTION
-    translateBtn.textContent = translateMobile.textContent = "Vietnamese";
+    translateBtn.textContent = translateMobile.textContent = "Tiếng Việt";
     docDesk.textContent = docMob.textContent = "Document";
     serviceDesk.textContent = serviceMob.textContent = "Services";
     guidesDesk.textContent = guidesMob.textContent = "Guides";
@@ -519,7 +517,15 @@ const translate = function () {
 
     fig1.innerHTML = `<h3>Fundamental Analysis</h3>
       <p class="module-desc">
-      Leverage the insights provided by the columns—Market Cap (Market Capitalization), 24H Volume (Trading Volume during the day), Volume Change 24H (Trading Volume change compared to the previous 24H), Funding Rate, and Long-Short Ratio in the Future Market. These metrics will guide you in making informed investment decisions for your targeted cryptocurrencies.
+      Leverage the insights provided by the columns—
+                    <strong>Market Cap</strong>,
+                    <strong>24H Volume</strong> (Trading Volume during the day),
+                    <strong>Volume Change 24H</strong> (Trading Volume change
+                    compared to the previous 24H),
+                    <strong>Funding Rate</strong>, and
+                    <strong>Long-Short Ratio</strong> in the Future Market.
+                    These metrics will guide you in making informed investment
+                    decisions for your targeted cryptocurrencies.
       </p>`;
 
     fig2.innerHTML = `<h3>Price change Real-time monitoring</h3>
@@ -529,45 +535,50 @@ const translate = function () {
 
     fig3.innerHTML = `<h3>Technical Analysis</h3>
     <p class="module-desc">
-    Instantly search and display Crypto lists that meet the conditions of the most commonly used technical indicators by traders including RSI, Bollinger Band and Fibonacci retracement.
+    Instantly search and display Crypto lists that meet the
+                    conditions of the most commonly used technical indicators by
+                    traders including <strong>RSI</strong>, <strong>Bollinger Band</strong> and <strong>Fibonacci
+                    retracement</strong>.
     </p>`;
 
     // GUIDES SECTION
     document.querySelector(".guides-desc").textContent = "User Guides";
     setText.innerHTML = `<h3 class="settings-heading">Customise Your Trading Experience</h3>
-    <p class="heading-desc">
-      At Tradie, we prioritize your trading preferences. With our
-      user-friendly Settings page, you can personalize your crypto
-      monitoring experience.
-    </p>`;
+    `;
 
     textBlock1.innerHTML = `
     <h4>Step 1: Set up your indicators</h4>
           <p class="config-desc">
-          Access the Setting page and adjust your desired indicators. When set on the Simple page, the Record results page will display all cryptocurrencies that meet one or more of the indicators you have set.
-          </p>
-          <h5>Advanced Configuration</h5>
-          <p class="sub-desc">
-          Utilize our Advanced settings to monitor multiple trading strategies simultaneously. Create logical groups with multiple customizations to cover the entire market.
-          </p>`;
+              Easily access the <strong>Settings</strong> page and adjust your
+              desired conditions. Choose from a range of technical analysis
+              strategies and fundamental analysis parameters to tailor your
+              investment approach.
+            </p>
+            <h5>Advanced Configuration</h5>
+            <p class="sub-desc">
+              Utilize our <strong>Advanced</strong> settings to monitor multiple
+              trading strategies simultaneously. Create logical groups with
+              multiple customizations to cover the entire market.
+            </p>`;
 
     textBlock2.innerHTML = `
     <h4>Step 2: Access Your Customized Results</h4>
           <p class="config-desc">
-            Check the Record page to view a list of cryptocurrencies that match
-            your specified criteria. Tradie calculates and lists the most
-            relevant assets, providing you with valuable insights for your
-            trading decisions.
-          </p>`;
+              Check the <strong>Record</strong> page to view a list of
+              cryptocurrencies that match your specified criteria. Tradie
+              calculates and lists the most relevant assets, providing you with
+              valuable insights for your trading decisions.
+            </p>`;
 
     textBlock3.innerHTML = `
     <h4>Step 3: Set Up Telegram Notification</h4>
           <p class="config-desc">
-            In case the Record page does not display any results, you have the
-            option to configure Telegram notifications. This way, whenever a
-            cryptocurrency meets all specified conditions, Tradie will promptly
-            send you an alert.
-          </p>`;
+              In case the <strong>Record</strong> page does not display any
+              results, you have the option to
+              <strong>configure</strong> Telegram notifications. This way,
+              whenever a cryptocurrency meets all specified conditions, Tradie
+              will promptly send you an alert.
+            </p>`;
 
     document.querySelector(".block-4").textContent =
       "Unlock Your trading Potentials";
@@ -598,16 +609,21 @@ const translate = function () {
     </svg>
           `;
 
-    document.querySelector(
-      ".f5-1"
-    ).textContent = `If you trade using technical analysis, you can combine RSI and
-    Bollinger Band in the Settings -> Advanced section as follows:`;
+    document.querySelector(".f5-1").innerHTML = "";
 
     document.querySelector(
+      ".f5-1"
+    ).innerHTML = `If you trade using technical analysis, you can combine
+              <strong>RSI</strong> and <strong>Bollinger Band</strong> in the
+              <strong>Settings</strong> -> <strong>Advanced</strong> section as
+              follows:`;
+
+    document.querySelector(".f5-2").innerHTML = "";
+    document.querySelector(
       ".f5-2"
-    ).textContent = `Go back to the "Record" page, and Tradie will calculate and list all
-    cryptocurrencies in the "Overbought" and "Oversold" zones as you
-    have set.`;
+    ).innerHTML = `Go back to the <strong>"Record"</strong> page, and Tradie will
+              calculate and list all cryptocurrencies in the "Overbought" and
+              "Oversold" zones as you have set.`;
 
     // FAQ 7
     document.querySelector(
