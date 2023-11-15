@@ -638,6 +638,7 @@ ul li.list {
   top: 0;
   width: 100%;
   margin: auto;
+  margin-right: 5px;
   text-align: center;
   transition: transform 0.5s ease;
   z-index: 4;
@@ -878,11 +879,6 @@ div.socials {
   footer {
     padding-right: 60px;
     padding-left: 60px;
-  }
-
-  .footer-desc {
-    font-size: 2.8rem;
-    margin-top: 30px;
   }
 
   .social-icons {
