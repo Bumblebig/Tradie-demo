@@ -405,7 +405,7 @@ const translate = function () {
     textBlock1.innerHTML = `
     <h4>Bước 1: Cài đặt các chỉ báo của bạn</h4>
           <p class="config-desc">
-          Truy cập trang <strong>Setting</strong>  và điều chỉnh các chỉ báo mong muốn của bạn. Khi cài đặt tại trang <strong>Simple</strong>. Trang kết quả Record sẽ hiển thị tất cả các crypto thỏa mãn một hoặc nhiều các chỉ báo bạn đã cài đặt.
+          Truy cập trang <strong>Setting</strong>  và điều chỉnh các chỉ báo mong muốn của bạn. Khi cài đặt tại trang <strong>Simple</strong>. Trang kết quả <strong>Record</strong> sẽ hiển thị tất cả các crypto thỏa mãn một hoặc nhiều các chỉ báo bạn đã cài đặt.
           </p>
           <h5>Cài đặt nâng cao</h5>
           <p class="sub-desc">

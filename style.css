@@ -614,7 +614,7 @@ ul li.list {
   cursor: pointer;
   top: 40%;
   width: max-content;
-  z-index: 100;
+  z-index: 10;
 }
 
 .faq-btn-left {
@@ -627,7 +627,7 @@ ul li.list {
 
 .faq-slider {
   position: relative;
-  height: 48rem;
+  height: 50rem;
   width: 90%;
   margin: 10px auto;
   overflow: hidden;
@@ -871,6 +871,10 @@ div.socials {
     font-size: 3rem;
   }
 
+  .faq-slider {
+    height: 100rem;
+  }
+
   footer {
     padding-right: 60px;
     padding-left: 60px;
@@ -990,6 +994,10 @@ div.socials {
 
   .answer {
     font-size: 2.8rem;
+  }
+
+  .faq-slider {
+    height: 80rem;
   }
 
   footer {
@@ -1151,12 +1159,8 @@ div.socials {
     font-size: 2rem;
   }
 
-  .footer-heading {
-    font-size: 2.8rem;
-  }
-
-  .footer-desc {
-    font-size: 2rem;
+  .faq-slider {
+    height: 60rem;
   }
 
   .social-icons {
@@ -1307,6 +1311,10 @@ div.socials {
     font-size: 2rem;
   }
 
+  .faq-slider {
+    height: 40rem;
+  }
+
   .faq-btn-left {
     left: -30px;
   }
@@ -1318,11 +1326,6 @@ div.socials {
   footer {
     padding-left: 30px;
     padding-right: 30px;
-  }
-
-  .footer-desc {
-    font-size: 1.8rem;
-    width: 80%;
   }
 
   .copyright {
@@ -1511,13 +1514,8 @@ div.socials {
     width: 20px;
   }
 
-  .footer-heading {
-    font-size: 2.7rem;
-  }
-
-  .footer-desc {
-    width: 70%;
-    font-size: 1.8rem;
+  .faq-slider {
+    height: 35rem;
   }
 
   .copyright {
@@ -1586,7 +1584,7 @@ div.socials {
   }
 
   .faq-slider {
-    height: 20rem;
+    height: 25rem;
     width: 100%;
   }
 
