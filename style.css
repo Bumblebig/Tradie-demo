@@ -260,7 +260,6 @@ a.mob-action:visited {
   background-color: #219ebc;
   border-radius: 6px;
   margin-right: 0px;
-  width: 80px;
   text-align: center;
 }
 
@@ -1623,5 +1622,12 @@ div.socials {
 
   .social-icons {
     width: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  a.mob-action:link,
+  a.mob-action:visited {
+    font-size: 1.6rem;
   }
 }

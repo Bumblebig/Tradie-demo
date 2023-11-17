@@ -362,6 +362,9 @@ const translate = function () {
       "";
 
   if (state) {
+    // STYLES
+    document.querySelector(".mob-action").style.width = "85px";
+
     // HEADER SECTION
     translateBtn.textContent = translateMobile.textContent = "English";
     docDesk.textContent = docMob.textContent = "Tài liệu";
@@ -495,6 +498,9 @@ const translate = function () {
     state = !state;
     // toggleFAQ();
   } else {
+    // STYLES
+    document.querySelector(".mob-action").style.width = "110px";
+
     // HEADER SECTION
     translateBtn.textContent = translateMobile.textContent = "Tiếng Việt";
     docDesk.textContent = docMob.textContent = "Document";
