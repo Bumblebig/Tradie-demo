@@ -191,10 +191,6 @@ header {
   padding: 20px 20px 10px 20px;
 }
 
-.menu {
-  display: none;
-}
-
 nav li {
   display: inline-block;
   list-style-type: none;
@@ -242,6 +238,39 @@ button {
   margin: auto;
   transition: inherit;
   cursor: pointer;
+}
+
+.mobNavs {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+}
+
+a.mob-action:link,
+a.mob-action:visited {
+  display: block;
+  text-decoration: none;
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  margin: auto;
+  transition: inherit;
+  cursor: pointer;
+  padding: 8px 0px;
+  background-color: #219ebc;
+  border-radius: 6px;
+  margin-right: 0px;
+  width: 80px;
+  text-align: center;
+}
+
+.hamburger {
+  display: inline-block;
+  width: 30px;
+}
+
+.menu {
+  display: none;
 }
 
 .header-text {
@@ -1363,9 +1392,7 @@ div.socials {
   }
 
   .menu {
-    display: block;
-    width: 30px;
-    cursor: pointer;
+    display: flex;
   }
 
   .button {
@@ -1537,9 +1564,7 @@ div.socials {
   }
 
   .menu {
-    display: block;
-    width: 30px;
-    cursor: pointer;
+    display: flex;
   }
 
   .header-text {
@@ -1598,11 +1623,5 @@ div.socials {
 
   .social-icons {
     width: 30px;
-  }
-
-  .mob-action:link,
-  .mob-action:visited {
-    color: #212529;
-    text-decoration: none;
   }
 }

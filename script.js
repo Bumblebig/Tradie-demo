@@ -160,7 +160,7 @@ faqSlider();
 
 // NAVIGATIONS
 
-const hamburger = document.querySelector(".menu");
+const hamburger = document.querySelector(".hamburger");
 const mobileNav = document.querySelector(".mobile-nav");
 const overlay = document.querySelector(".overlay");
 const mobNavs = document.querySelectorAll(".mobile");
